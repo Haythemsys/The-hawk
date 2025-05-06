@@ -5,29 +5,38 @@
   <title>The Hawk – Esoteric AI</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
   <style>
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px #fff, 0 0 10px #00ffc8, 0 0 20px #00ffc8; }
+      50% { text-shadow: 0 0 10px #fff, 0 0 15px #00ffc8, 0 0 30px #00ffc8; }
+      100% { text-shadow: 0 0 5px #fff, 0 0 10px #00ffc8, 0 0 20px #00ffc8; }
+    }
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: url('background.png') center center no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      background-color: #0f2027;
+      background: linear-gradient(135deg, #000000, #0f2027);
+      background-size: 400% 400%;
+      animation: animateBackground 20s ease infinite;
       color: #fff;
+    }
+    @keyframes animateBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     header {
       text-align: center;
       padding: 30px 20px 10px;
     }
     header img {
-      width: 120px;
+      width: 180px;
       margin-bottom: 15px;
     }
     h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 2.2em;
-      color: #00ffc8;
+      color: #ffffff;
+      animation: glow 2s infinite;
       margin-bottom: 10px;
-      text-shadow: 0 0 12px rgba(0, 255, 200, 0.5);
     }
     section {
       max-width: 900px;
