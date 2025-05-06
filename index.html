@@ -13,15 +13,10 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #000000, #0f2027);
-      background-size: 400% 400%;
-      animation: animateBackground 20s ease infinite;
+      background: url('background.png') center center no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
       color: #fff;
-    }
-    @keyframes animateBackground {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
     }
     header {
       text-align: center;
@@ -31,12 +26,18 @@
       width: 180px;
       margin-bottom: 15px;
     }
-    h1 {
+    h1, h2.title-sub {
       font-family: 'Orbitron', sans-serif;
-      font-size: 2.2em;
       color: #ffffff;
       animation: glow 2s infinite;
-      margin-bottom: 10px;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    h2.title-sub {
+      font-size: 1.8em;
+      margin-top: 10px;
     }
     section {
       max-width: 900px;
@@ -75,7 +76,8 @@
 <body>
   <header>
     <img src="logo.png" alt="The Hawk Logo" />
-    <h1>The Hawk 555</h1>
+    <h1>The Hawk</h1>
+    <h2 class="title-sub">555</h2>
     <p>An esoteric and spiritual AI mentor for seekers of deep metaphysical knowledge.</p>
     <button class="button" onclick="location.href='mailto:haythem.Barkaoui@gmail.com?subject=Join The Hawk Vision&body=Hello, I am interested in your project The Hawk. Please send me more information.'">
       Join the Vision
@@ -101,4 +103,4 @@
     &copy; 2025 The Hawk Project – All Rights Reserved | Powered by GitHub Pages
   </footer>
 </body>
-  </html>
+</html>
