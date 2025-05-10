@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<header>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Hawk 555</title>
@@ -188,6 +188,13 @@
 
   <!-- رأس الصفحة -->
   <header>
+    <header>
+  ... باقي العنوان ...
+  <!-- هنا تحط الزر -->
+  <div style="margin-top: 20px;">
+    <button onclick="scrollToThinking()" class="magic-button" style="...">Thinking Method</button>
+  </div>
+    </header>
     <button onclick="scrollToThinking()" class="magic-button">Thinking Method</button>
     <img src="logo.png" alt="Logo" class="logo">
     <h1 class="title">
@@ -345,5 +352,16 @@
     if (section) section.scrollIntoView({ behavior: 'smooth' });
   }
   </script>
+<script>
+  function scrollToThinking() {
+    const lang = document.getElementById("langSelect").value;
+    let targetId = "thinking-en";
+    if (lang === "ar") targetId = "thinking-ar";
+    else if (lang === "fr") targetId = "thinking-fr";
+
+    const section = document.getElementById(targetId);
+    if (section) section.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
 </body>
 </html>
