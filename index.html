@@ -104,3 +104,17 @@
   </footer>
 </body>
 </html>
+<div style="text-align: right; margin: 10px;">
+  <select id="langSelect" onchange="changeLanguage()">
+    <option value="ar">العربية</option>
+    <option value="fr">Français</option>
+    <option value="en">English</option>
+  </select>
+</div>
+
+<script>
+  function changeLanguage() {
+    const lang = document.getElementById("langSelect").value;
+    window.location.href = `${lang}.html`;
+  }
+</script>
