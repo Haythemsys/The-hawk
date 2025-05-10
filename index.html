@@ -188,6 +188,7 @@
 
   <!-- رأس الصفحة -->
   <header>
+    <button onclick="scrollToThinking()" class="magic-button">Thinking Method</button>
     <img src="logo.png" alt="Logo" class="logo">
     <h1 class="title">
       <span id="projectName">THE HAWK</span><br>
@@ -332,6 +333,17 @@
       },
       "retina_detect": true
     });
+  </script>
+  <script>
+  function scrollToThinking() {
+    const lang = document.getElementById("langSelect").value;
+    let targetId = "thinking-en";
+    if (lang === "ar") targetId = "thinking-ar";
+    else if (lang === "fr") targetId = "thinking-fr";
+
+    const section = document.getElementById(targetId);
+    if (section) section.scrollIntoView({ behavior: 'smooth' });
+  }
   </script>
 </body>
 </html>
