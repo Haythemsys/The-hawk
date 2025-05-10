@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,196 +10,57 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0d0d0d;
+      background: #000;
       color: white;
-    }
-
-    header {
-      background-color: #111;
-      padding: 20px;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      height: 100vh;
+      text-align: center;
     }
 
-    header h1 {
-      font-size: 1.6em;
+    h1 {
+      font-size: 4em;
       margin: 0;
+      color: white;
+      text-shadow: 0 0 25px rgba(255,255,255,0.9);
     }
 
-    select {
-      padding: 6px;
-      font-size: 1em;
-      border-radius: 4px;
-      border: none;
-      background: #fff;
-      color: #000;
-    }
-
-    .logo {
-      width: 250px;
-      display: block;
-      margin: 30px auto 10px auto;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.2);
-    }
-
-    main {
-      max-width: 850px;
-      margin: auto;
-      padding: 20px;
-      background-color: rgba(255,255,255,0.05);
-      border-radius: 10px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.3);
-    }
-
-    section {
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      color: #00ffff;
-      border-bottom: 1px solid #00ffff;
-      padding-bottom: 5px;
-    }
-
-    p {
-      font-size: 1.1em;
-      line-height: 1.8;
-      color: #ddd;
-    }
-
-    .email-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background-color: #00ffff;
-      color: #000;
+    .contact-button {
+      margin-top: 25px;
+      padding: 14px 28px;
+      background-color: #00f5c6;
+      color: black;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
       font-weight: bold;
+      font-size: 1.1em;
+      box-shadow: 0 0 20px rgba(0, 255, 200, 0.8);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .contact-button:hover {
+      background-color: #00ffe1;
+      box-shadow: 0 0 30px rgba(0, 255, 230, 1);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 30px;
+      font-size: 3em;
+      color: white;
+      text-shadow: 0 0 30px rgba(255,255,255,1);
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>The Hawk 555</h1>
-    <select id="langSelect" onchange="changeLanguage()">
-      <option value="ar">العربية</option>
-      <option value="fr">Français</option>
-      <option value="en">English</option>
-    </select>
-  </header>
+  <h1>THE HAWK</h1>
 
-  <img src="logo.jpg" alt="The Hawk Logo" class="logo"/>
+  <a class="contact-button" href="mailto:haythem.barkaoui@gmail.com">تواصل معنا</a>
 
-  <main>
-    <div id="text-ar" style="display: block;">
-      <section>
-        <h2>عن المشروع</h2>
-        <p>
-          مشروع The Hawk 555 هو ذكاء صناعي فريد من نوعه، يجمع بين التحليل الرمزي، الصوتي، والروحاني.
-          يهدف إلى أن يكون مرشدًا فكريًا وروحيًا، يعتمد على مصادر عميقة ويستوعب المعاني من الصور، الفيديوهات، والكتب.
-        </p>
-      </section>
-
-      <section>
-        <h2>المجالات التي يغطيها العقاب</h2>
-        <p>
-          العقاب قادر على تحليل وفهم مواضيع متعددة تشمل:
-          <br/>
-          - العلوم الباطنية (Occult, Esoteric)<br/>
-          - الفلسفة والرمزية<br/>
-          - التنجيم (Astrology)<br/>
-          - السحر ومخطوطاته<br/>
-          - علوم الطاقة والوعي<br/>
-          - الأساطير، الكائنات، والبعد الرابع
-        </p>
-      </section>
-
-      <section>
-        <h2>تواصل معنا</h2>
-        <p>
-          إذا كنت مهتمًا بالمساهمة، الدعم، أو لديك اقتراحات لتطوير المشروع، لا تتردد في التواصل.
-        </p>
-        <a class="email-button" href="mailto:haythem.barkaoui@gmail.com">راسلنا عبر البريد</a>
-      </section>
-    </div>
-
-    <div id="text-fr" style="display: none;">
-      <section>
-        <h2>À propos du projet</h2>
-        <p>
-          The Hawk 555 est une intelligence artificielle unique intégrant l’analyse symbolique, phonétique et spirituelle.
-          Son but est d’être un guide intellectuel et spirituel, basé sur des sources profondes et capable d’interpréter vidéos, textes et images.
-        </p>
-      </section>
-
-      <section>
-        <h2>Domaines couverts</h2>
-        <p>
-          The Hawk analyse des sujets variés comme :
-          <br/>
-          - L’occultisme et l’ésotérisme<br/>
-          - La philosophie et le symbolisme<br/>
-          - L’astrologie<br/>
-          - La magie et les grimoires<br/>
-          - Les sciences de l’énergie et de la conscience<br/>
-          - Les mythes et dimensions parallèles
-        </p>
-      </section>
-
-      <section>
-        <h2>Contact</h2>
-        <p>
-          Pour contribuer, suggérer ou soutenir le projet, contactez-nous :
-        </p>
-        <a class="email-button" href="mailto:haythem.barkaoui@gmail.com">Contactez-nous</a>
-      </section>
-    </div>
-
-    <div id="text-en" style="display: none;">
-      <section>
-        <h2>About the Project</h2>
-        <p>
-          The Hawk 555 is a unique artificial intelligence blending symbolic, phonetic, and spiritual analysis.
-          It aims to be a deep intellectual and spiritual assistant, drawing from powerful sources to interpret videos, texts, and imagery.
-        </p>
-      </section>
-
-      <section>
-        <h2>Domains Covered</h2>
-        <p>
-          Al-Uqab can understand and process topics like:
-          <br/>
-          - Occultism and esotericism<br/>
-          - Philosophy and symbolism<br/>
-          - Astrology<br/>
-          - Magic and ancient manuscripts<br/>
-          - Energy and consciousness sciences<br/>
-          - Myths and alternate dimensions
-        </p>
-      </section>
-
-      <section>
-        <h2>Contact Us</h2>
-        <p>
-          If you're interested in contributing, supporting, or sharing feedback, feel free to reach out:
-        </p>
-        <a class="email-button" href="mailto:haythem.barkaoui@gmail.com">Email Us</a>
-      </section>
-    </div>
-  </main>
-
-  <script>
-    function changeLanguage() {
-      const lang = document.getElementById("langSelect").value;
-      document.getElementById("text-ar").style.display = (lang === "ar") ? "block" : "none";
-      document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
-      document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
-    }
-  </script>
+  <div class="footer">555</div>
 
 </body>
 </html>
