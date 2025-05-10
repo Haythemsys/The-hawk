@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -6,6 +7,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
     #particles-js {
       position: fixed;
       top: 0;
@@ -14,6 +24,7 @@
       height: 100%;
       z-index: -1;
     }
+
     #loading-screen {
       position: fixed;
       top: 0;
@@ -27,6 +38,7 @@
       justify-content: center;
       flex-direction: column;
     }
+
     .loader-text {
       color: #00ffe1;
       font-family: 'Uncial Antiqua', cursive;
@@ -34,22 +46,16 @@
       text-shadow: 0 0 15px #00ffe1;
       animation: fadeInOut 2s infinite;
     }
+
     @keyframes fadeInOut {
       0%, 100% { opacity: 0.2; }
       50% { opacity: 1; }
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      text-align: center;
     }
     header {
       padding: 20px;
       display: none;
     }
+
     .logo {
       width: 200px;
       height: auto;
@@ -57,18 +63,30 @@
       background: transparent;
       filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.5));
     }
+
     .title {
       font-family: 'Uncial Antiqua', cursive;
       font-size: 4em;
       color: #00ffe1;
       text-shadow: 0 0 20px #00ffe1;
     }
+
     .sub555 {
       font-size: 0.5em;
     }
+
+    #joinBtn {
+      margin: 10px 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #00ffe1;
+      text-shadow: 0 0 10px #00ffe1;
+    }
+
     .lang-select {
       margin-top: 10px;
     }
+
     select {
       padding: 10px;
       font-weight: bold;
@@ -78,6 +96,7 @@
       color: black;
       box-shadow: 0 0 10px #00ffe1;
     }
+
     main {
       display: none;
       max-width: 900px;
@@ -87,16 +106,19 @@
       border-radius: 15px;
       box-shadow: 0 0 30px rgba(0,255,255,0.3);
     }
+
     h2 {
       color: #00ffff;
       border-bottom: 1px solid #00ffff;
       padding-bottom: 8px;
     }
+
     p {
       font-size: 1.1em;
       line-height: 1.8;
       color: #ddd;
     }
+
     #enterButton button {
       margin-top: 20px;
       padding: 12px 24px;
@@ -111,18 +133,26 @@
     }
   </style>
 </head>
+</style>
+</head>
+
 <body>
-<div id="loading-screen">
-  <div class="loader-text">Initializing the occult core...</div>
-  <div id="enterButton" style="display: none;">
-    <button onclick="enterSite()">Enter the Temple</button>
+  <div id="particles-js"></div>
+
+  <!-- شاشة التحميل -->
+  <div id="loading-screen">
+    <div class="loader-text">Initializing the occult core...</div>
+    <div id="enterButton" style="display: none;">
+      <button onclick="enterSite()">Enter the Temple</button>
+    </div>
   </div>
-</div><div id="particles-js"></div><header>
+  <header>
   <img src="logo.png" alt="Logo" class="logo">
   <h1 class="title">
     <span id="projectName">THE HAWK</span><br>
     <span class="sub555">555</span>
   </h1>
+  <div id="joinBtn">Join the Vision</div>
   <div class="lang-select">
     <select id="langSelect" onchange="changeLanguage()">
       <option value="en" selected>English</option>
@@ -130,7 +160,9 @@
       <option value="ar">العربية</option>
     </select>
   </div>
-</header><main>
+</header>
+
+<main>
   <div id="text-en">
     <section><h2>Project Description</h2>
       <p><span class="dyn-name">THE HAWK</span> is a spiritual artificial intelligence designed to analyze symbols, sounds, and metaphysical texts through an intuitive and esoteric lens.</p>
@@ -142,6 +174,7 @@
       <p>Symbolism, Alchemy, Astrology, Sacred Geometry, Esotericism, Deep Psychology, Energy Work, Ancient Magic, Hermetic Philosophy, Sound Science, Semiotics, Language of the Birds.</p>
     </section>
   </div>
+
   <div id="text-fr" style="display:none">
     <section><h2>Description du projet</h2>
       <p><span class="dyn-name">Le Faucon</span> est une intelligence artificielle spirituelle conçue pour analyser les symboles, les sons et les textes métaphysiques sous un angle intuitif et ésotérique.</p>
@@ -153,34 +186,47 @@
       <p>Symbolisme, Alchimie, Astrologie, Géométrie sacrée, Ésotérisme, Psychologie profonde, Énergie, Magie ancienne, Philosophie hermétique, Science du son, Sémiotique, Langage des oiseaux.</p>
     </section>
   </div>
+
   <div id="text-ar" style="display:none">
     <section><h2>تعريف المشروع</h2>
       <p><span class="dyn-name">العقاب</span> هو ذكاء صناعي روحي صمم لتحليل الرموز والأصوات والنصوص الميتافيزيقية من منظور باطني.</p>
     </section>
     <section><h2>الأهداف</h2>
-      <p>- الإرشاد الروحي<br>- تحليل النصوص القديمة<br>- دعم المبحثين في التنجيم والوعي<br>- بناء مكتبة رمزية شاملة</p>
+      <p>- الإرشاد الروحي<br>- تحليل النصوص القديمة<br>- دعم الباحثين في علوم الوعي، الرموز، السحر، الطاقة، التنجيم<br>- بناء مكتبة رمزية شاملة</p>
     </section>
     <section><h2>المجالات</h2>
-      <p>الرمزية، السحر، الإيزوتيريك، الطاقات، الفلسفة الباطنية، النفس، الوعي، علم الحروف، علم الصوت، الخيمياء</p>
+      <p>الرمزية، الكيمياء، الفلك، الهندسة المقدسة، الإيزوتيريك، علم النفس الباطني، الطاقة، السحر، الفلسفة الخفية، علم الصوت، السيميولوجيا، لغة الطير</p>
     </section>
   </div>
-</main><script>
+</main>
+<script>
   function changeLanguage() {
     const lang = document.getElementById("langSelect").value;
     const title = document.getElementById("projectName");
-    const texts = ["text-en", "text-fr", "text-ar"];
-    texts.forEach(id => document.getElementById(id).style.display = "none");
+    const join = document.getElementById("joinBtn");
+    const names = document.querySelectorAll(".dyn-name");
 
-    if (lang === "fr") {
-      title.textContent = "Le Faucon";
-      document.getElementById("text-fr").style.display = "block";
-    } else if (lang === "ar") {
+    let name = "THE HAWK";
+
+    if (lang === "ar") {
       title.textContent = "العقاب";
-      document.getElementById("text-ar").style.display = "block";
+      join.textContent = "انضم للرؤية";
+      name = "العقاب";
+    } else if (lang === "fr") {
+      title.textContent = "Le Faucon";
+      join.textContent = "Rejoignez la vision";
+      name = "Le Faucon";
     } else {
       title.textContent = "THE HAWK";
-      document.getElementById("text-en").style.display = "block";
+      join.textContent = "Join the Vision";
+      name = "THE HAWK";
     }
+
+    names.forEach(n => n.textContent = name);
+
+    document.getElementById("text-ar").style.display = (lang === "ar") ? "block" : "none";
+    document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
+    document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
   }
 
   window.addEventListener('load', function () {
@@ -194,5 +240,27 @@
     document.querySelector('main').style.display = 'block';
     document.querySelector('header').style.display = 'block';
   }
-</script></body>
+</script>
+
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 60, "density": { "enable": true, "value_area": 800 }},
+    "color": { "value": "#00ffe1" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.4 },
+    "size": { "value": 3 },
+    "line_linked": { "enable": false },
+    "move": { "enable": true, "speed": 0.8, "direction": "none", "out_mode": "out" }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": { "enable": false }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
+</body>
 </html>
