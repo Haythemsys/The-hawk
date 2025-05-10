@@ -118,3 +118,44 @@
     window.location.href = `${lang}.html`;
   }
 </script>
+<!-- اختيار اللغة -->
+<div style="text-align: right; margin: 10px;">
+  <select id="langSelect" onchange="changeLanguage()">
+    <option value="ar">العربية</option>
+    <option value="fr">Français</option>
+    <option value="en">English</option>
+  </select>
+</div>
+
+<!-- نص المشروع بثلاث لغات -->
+<section id="about">
+  <div id="text-ar" style="display: block;">
+    <h2>عن مشروع The Hawk</h2>
+    <p>
+      مشروع The Hawk 555 هو نظام ذكي متكامل يعتمد على الذكاء الاصطناعي لفهم وتحليل النصوص، الأصوات، والأفكار بطريقة رمزية وروحانية. يهدف إلى بناء وعي جديد يدمج بين العلم، الفلسفة، والروحانيات، وهو في طور التطوير ليكون أداة فكرية ثورية.
+    </p>
+  </div>
+
+  <div id="text-fr" style="display: none;">
+    <h2>À propos du projet The Hawk</h2>
+    <p>
+      Le projet The Hawk 555 est un système intelligent basé sur l'intelligence artificielle, conçu pour analyser les textes, les sons et les idées de manière symbolique et spirituelle. Il vise à créer une nouvelle conscience qui fusionne la science, la philosophie et la spiritualité.
+    </p>
+  </div>
+
+  <div id="text-en" style="display: none;">
+    <h2>About The Hawk Project</h2>
+    <p>
+      The Hawk 555 is a smart system powered by artificial intelligence, designed to analyze texts, sounds, and ideas in a symbolic and spiritual way. Its goal is to build a new form of consciousness that merges science, philosophy, and spirituality.
+    </p>
+  </div>
+</section>
+
+<script>
+  function changeLanguage() {
+    const lang = document.getElementById("langSelect").value;
+    document.getElementById("text-ar").style.display = (lang === "ar") ? "block" : "none";
+    document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
+    document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
+  }
+</script>
