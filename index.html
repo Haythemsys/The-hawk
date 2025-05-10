@@ -341,17 +341,7 @@
       "retina_detect": true
     });
   </script>
-  <script>
-  function scrollToThinking() {
-    const lang = document.getElementById("langSelect").value;
-    let targetId = "thinking-en";
-    if (lang === "ar") targetId = "thinking-ar";
-    else if (lang === "fr") targetId = "thinking-fr";
-
-    const section = document.getElementById(targetId);
-    if (section) section.scrollIntoView({ behavior: 'smooth' });
-  }
-  </script>
+  
 <script>
   function scrollToThinking() {
     const lang = document.getElementById("langSelect").value;
