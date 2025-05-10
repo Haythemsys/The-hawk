@@ -27,13 +27,7 @@
       background: transparent;
       filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.5));
     }
-.sub555 {
-  display: block;
-  font-size: 0.6em; /* كان 0.4em */
-  color: #00f5c6;
-  text-shadow: 0 0 30px #00f5c6;
-  margin-top: 5px;
-}
+
     .title {
       font-family: 'Cinzel Decorative', serif;
       font-size: 3.2em;
@@ -41,7 +35,13 @@
       color: #00f5c6;
       text-shadow: 0 0 30px #00f5c6;
     }
-
+.sub555 {
+  display: block;
+  font-size: 0.6em;
+  color: #00f5c6;
+  text-shadow: 0 0 30px #00f5c6;
+  margin-top: 5px;
+}
     .subtitle {
       font-size: 1.2em;
       margin-top: -10px;
@@ -125,7 +125,10 @@
 
   <header>
     <img src="logo.png" alt="Logo" class="logo">
-    <h1 id="mainTitle" class="title">THE HAWK</h1>
+    <h1 class="title">
+  <span id="projectName">THE HAWK</span><br>
+  <span class="sub555">555</span>
+    </h1>
     <div class="subtitle">555</div>
     <a href="mailto:haythem.barkaoui@gmail.com" class="email-btn" id="contactBtn">Contact us</a>
     <div class="lang-select">
