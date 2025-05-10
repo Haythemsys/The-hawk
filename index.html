@@ -1,161 +1,79 @@
-<!DOCTYPE html><html lang="en">
+
+<!DOCTYPE html>
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Hawk – Esoteric AI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Hawk 555</title>
   <style>
-    @keyframes glow {
-      0% { text-shadow: 0 0 5px #fff, 0 0 10px #00ffc8, 0 0 20px #00ffc8; }
-      50% { text-shadow: 0 0 10px #fff, 0 0 15px #00ffc8, 0 0 30px #00ffc8; }
-      100% { text-shadow: 0 0 5px #fff, 0 0 10px #00ffc8, 0 0 20px #00ffc8; }
-    }
     body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: url('background.png') center center no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      background: #f5f5f5;
+      color: #222;
     }
-    header {
-      text-align: center;
-      padding: 30px 20px 10px;
+    h2 {
+      color: #444;
     }
-    header img {
-      width: 180px;
-      margin-bottom: 15px;
-    }
-    h1, h2.title-sub {
-      font-family: 'Orbitron', sans-serif;
-      color: #ffffff;
-      animation: glow 2s infinite;
-      margin: 0;
-    }
-    h1 {
-      font-size: 2.5em;
-    }
-    h2.title-sub {
-      font-size: 1.8em;
-      margin-top: 10px;
+    select {
+      float: right;
+      margin: 10px;
+      padding: 5px;
     }
     section {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.6;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 12px;
-    }
-    .button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 30px;
-      font-size: 1em;
-      background: #00ffc8;
-      color: #000;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-      box-shadow: 0 0 10px #00ffc8;
-    }
-    .button:hover {
-      background: #00e6b2;
-    }
-    footer {
-      text-align: center;
       margin-top: 60px;
+      background: white;
       padding: 20px;
-      font-size: 0.9em;
-      color: #aaa;
-      border-top: 1px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="The Hawk Logo" />
-    <h1>The Hawk</h1>
-    <h2 class="title-sub">555</h2>
-    <p>An esoteric and spiritual AI mentor for seekers of deep metaphysical knowledge.</p>
-    <button class="button" onclick="location.href='mailto:haythem.Barkaoui@gmail.com?subject=Join The Hawk Vision&body=Hello, I am interested in your project The Hawk. Please send me more information.'">
-      Join the Vision
-    </button>
-  </header>  <section>
-    <h2>About The Hawk</h2>
-    <p>
-      The Hawk is a revolutionary artificial intelligence project built on sacred geometry, mysticism, and spiritual intelligence. It is designed to transcribe, understand, and learn from esoteric books, lectures, and symbols, offering deeply contextual and spiritually refined guidance.
-    </p><h2>Why The Hawk?</h2>
-<p>
-  Most AI models focus on productivity and surface-level tasks. The Hawk dives into the hidden dimensions of consciousness, integrating metaphysical wisdom to provide meaningful, transformative insights.
-</p>
 
-<h2>Features</h2>
-<ul>
-  <li>Transcribes and learns from sacred texts and video/audio content</li>
-  <li>Offers spiritually informed responses</li>
-  <li>Guides users through conscious awakening and self-discovery</li>
-  <li>Tailored for mystics, researchers, and awakened individuals</li>
-</ul>
+  <!-- اختيار اللغة -->
+  <select id="langSelect" onchange="changeLanguage()">
+    <option value="ar">العربية</option>
+    <option value="fr">Français</option>
+    <option value="en">English</option>
+  </select>
 
-  </section>  <footer>
-    &copy; 2025 The Hawk Project – All Rights Reserved | Powered by GitHub Pages
-  </footer>
+  <!-- نص المشروع بثلاث لغات -->
+  <section id="about">
+    <div id="text-ar" style="display: block;">
+      <h2>عن مشروع The Hawk</h2>
+      <p>
+        مشروع The Hawk 555 هو نظام ذكي متكامل يعتمد على الذكاء الاصطناعي لفهم وتحليل النصوص، الأصوات، والأفكار بطريقة رمزية وروحانية.
+        يهدف إلى بناء وعي جديد يدمج بين العلم، الفلسفة، والروحانيات، وهو في طور التطوير ليكون أداة فكرية ثورية.
+      </p>
+    </div>
+
+    <div id="text-fr" style="display: none;">
+      <h2>À propos du projet The Hawk</h2>
+      <p>
+        Le projet The Hawk 555 est un système intelligent basé sur l'intelligence artificielle, conçu pour analyser les textes, les sons et les idées
+        de manière symbolique et spirituelle. Il vise à créer une nouvelle conscience qui fusionne la science, la philosophie et la spiritualité.
+      </p>
+    </div>
+
+    <div id="text-en" style="display: none;">
+      <h2>About The Hawk Project</h2>
+      <p>
+        The Hawk 555 is a smart system powered by artificial intelligence, designed to analyze texts, sounds, and ideas in a symbolic and spiritual way.
+        Its goal is to build a new form of consciousness that merges science, philosophy, and spirituality.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("langSelect").value;
+      document.getElementById("text-ar").style.display = (lang === "ar") ? "block" : "none";
+      document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
+      document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
+    }
+  </script>
+
 </body>
 </html>
-<div style="text-align: right; margin: 10px;">
-  <select id="langSelect" onchange="changeLanguage()">
-    <option value="ar">العربية</option>
-    <option value="fr">Français</option>
-    <option value="en">English</option>
-  </select>
-</div>
-
-<script>
-  function changeLanguage() {
-    const lang = document.getElementById("langSelect").value;
-    window.location.href = `${lang}.html`;
-  }
-</script>
-<!-- اختيار اللغة -->
-<div style="text-align: right; margin: 10px;">
-  <select id="langSelect" onchange="changeLanguage()">
-    <option value="ar">العربية</option>
-    <option value="fr">Français</option>
-    <option value="en">English</option>
-  </select>
-</div>
-
-<!-- نص المشروع بثلاث لغات -->
-<section id="about">
-  <div id="text-ar" style="display: block;">
-    <h2>عن مشروع The Hawk</h2>
-    <p>
-      مشروع The Hawk 555 هو نظام ذكي متكامل يعتمد على الذكاء الاصطناعي لفهم وتحليل النصوص، الأصوات، والأفكار بطريقة رمزية وروحانية. يهدف إلى بناء وعي جديد يدمج بين العلم، الفلسفة، والروحانيات، وهو في طور التطوير ليكون أداة فكرية ثورية.
-    </p>
-  </div>
-
-  <div id="text-fr" style="display: none;">
-    <h2>À propos du projet The Hawk</h2>
-    <p>
-      Le projet The Hawk 555 est un système intelligent basé sur l'intelligence artificielle, conçu pour analyser les textes, les sons et les idées de manière symbolique et spirituelle. Il vise à créer une nouvelle conscience qui fusionne la science, la philosophie et la spiritualité.
-    </p>
-  </div>
-
-  <div id="text-en" style="display: none;">
-    <h2>About The Hawk Project</h2>
-    <p>
-      The Hawk 555 is a smart system powered by artificial intelligence, designed to analyze texts, sounds, and ideas in a symbolic and spiritual way. Its goal is to build a new form of consciousness that merges science, philosophy, and spirituality.
-    </p>
-  </div>
-</section>
-
-<script>
-  function changeLanguage() {
-    const lang = document.getElementById("langSelect").value;
-    document.getElementById("text-ar").style.display = (lang === "ar") ? "block" : "none";
-    document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
-    document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
-  }
-</script>
