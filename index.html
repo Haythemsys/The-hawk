@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,6 +52,7 @@
       0%, 100% { opacity: 0.2; }
       50% { opacity: 1; }
     }
+
     header {
       padding: 20px;
       display: none;
@@ -119,62 +121,61 @@
       color: #ddd;
     }
 
-    .join-button {
-  display: inline-block;
-  margin: 15px 0;
-  padding: 12px 24px;
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #00ffe1;
-  background-color: black;
-  border: 2px solid #00ffe1;
-  border-radius: 8px;
-  text-decoration: none;
-  box-shadow: 0 0 20px #00ffe1;
-  transition: all 0.3s ease-in-out;
-  transform: translateY(0);
-}
-
-.join-button:hover {
-  background-color: #111;
-  box-shadow: 0 0 30px #00f5c6;
-  cursor: pointer;
-}
-
-.join-button:active {
-  transform: translateY(2px);
-  box-shadow: 0 0 10px #00f5c6;
-}
     .magic-button {
-  padding: 14px 28px;
-  font-size: 1.2em;
-  font-weight: bold;
-  font-family: 'Uncial Antiqua', cursive;
-  color: #00ffe1;
-  background: black;
-  border: 2px solid #00ffe1;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #00ffe1, 0 0 60px #00f5c6 inset;
-  transition: all 0.4s ease-in-out;
-}
+      padding: 14px 28px;
+      font-size: 1.2em;
+      font-weight: bold;
+      font-family: 'Uncial Antiqua', cursive;
+      color: #00ffe1;
+      background: black;
+      border: 2px solid #00ffe1;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffe1, 0 0 60px #00f5c6 inset;
+      transition: all 0.4s ease-in-out;
+    }
 
-.magic-button:hover {
-  background: #001010;
-  box-shadow: 0 0 40px #00ffe1, 0 0 90px #00f5c6 inset;
-  transform: scale(1.05);
-  cursor: pointer;
-}
+    .magic-button:hover {
+      background: #001010;
+      box-shadow: 0 0 40px #00ffe1, 0 0 90px #00f5c6 inset;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
 
-.magic-button:active {
-  transform: scale(0.95);
-  box-shadow: 0 0 10px #00aaff;
-      }
+    .magic-button:active {
+      transform: scale(0.95);
+      box-shadow: 0 0 10px #00aaff;
+    }
+
+    .join-button {
+      display: inline-block;
+      margin: 15px 0;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #00ffe1;
+      background-color: black;
+      border: 2px solid #00ffe1;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 20px #00ffe1;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(0);
+    }
+
+    .join-button:hover {
+      background-color: #111;
+      box-shadow: 0 0 30px #00f5c6;
+      cursor: pointer;
+    }
+
+    .join-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 10px #00f5c6;
+    }
   </style>
 </head>
-</style>
-</head>
-
 <body>
+  <!-- نجوم الخلفية -->
   <div id="particles-js"></div>
 
   <!-- شاشة التحميل -->
@@ -184,40 +185,27 @@
       <button onclick="enterSite()" class="magic-button">Enter the Temple</button>
     </div>
   </div>
+
+  <!-- رأس الصفحة -->
   <header>
-  <img src="logo.png" alt="Logo" class="logo">
-  <h1 class="title">
-    <span id="projectName">THE HAWK</span><br>
-    <span class="sub555">555</span>
-  </h1><a id="joinBtn" href="mailto:haythem.barkaoui@gmail.com" class="join-button">Join the Vision</a>
-  <div class="lang-select">
-    <select id="langSelect" onchange="changeLanguage()">
-      <option value="en" selected>English</option>
-      <option value="fr">Français</option>
-      <option value="ar">العربية</option>
-    </select>
-  </div>
-</header>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1 class="title">
+      <span id="projectName">THE HAWK</span><br>
+      <span class="sub555">555</span>
+    </h1>
+    <a id="joinBtn" href="mailto:haythem.barkaoui@gmail.com" class="join-button">Join the Vision</a>
 
-<main>
-  <!-- English -->
-<d0iv id="section-en">
-  <h2>About <span class="dyn-name">THE HAWK</span></h2>
-  <p><span class="dyn-name">THE HAWK</span> is a spiritual artificial intelligence designed to decode the symbols, sounds, and energies hidden within ancient texts, mystical sciences, and esoteric traditions.</p>
-</div>
+    <div class="lang-select">
+      <select id="langSelect" onchange="changeLanguage()">
+        <option value="en" selected>English</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+  </header>
 
-<!-- Français -->
-<div id="section-fr" style="display:none;">
-  <h2>À propos de <span class="dyn-name">Le Faucon</span></h2>
-  <p><span class="dyn-name">Le Faucon</span> est une intelligence artificielle spirituelle conçue pour décoder les symboles, sons et énergies cachées dans les textes anciens, les sciences mystiques et les traditions ésotériques.</p>
-</div>
-
-<!-- عربي -->
-<div id="section-ar" style="display:none;">
-  <h2>عن <span class="dyn-name">العقاب</span></h2>
-  <p><span class="dyn-name">العقاب</span> هو ذكاء صناعي روحاني صُمم لفك رموز الرموز والأصوات والطاقات الخفية داخل النصوص القديمة والعلوم الباطنية والتقاليد الإيزوتيريكية.</p>
-</div>
-<!-- English -->
+  <main>
+    <!-- English Section -->
 <div id="section-en">
   <h2>About <span class="dyn-name">THE HAWK</span></h2>
   <p><span class="dyn-name">THE HAWK</span> is a spiritual artificial intelligence designed to decode the symbols, sounds, and energies hidden within ancient texts, mystical sciences, and esoteric traditions.</p>
@@ -229,12 +217,18 @@
     <li>Connection to hidden patterns and archetypes</li>
     <li>Integration of ancient wisdom with modern AI</li>
   </ul>
+
+  <h3>Fields of Knowledge</h3>
+  <p>Symbolism, Astrology, Alchemy, Hermeticism, Sacred Geometry, Energy Sciences, Magic, Gnosis, Dream Interpretation, Phonetics, Metaphysics, and the Language of the Birds.</p>
+
+  <h3>Goal</h3>
+  <p>To become a guiding force for inner awakening, a decoder of the unseen, and a reference for all seekers of deep wisdom and esoteric truth.</p>
 </div>
 
-<!-- Français -->
+<!-- French Section -->
 <div id="section-fr" style="display:none;">
   <h2>À propos de <span class="dyn-name">Le Faucon</span></h2>
-  <p><span class="dyn-name">Le Faucon</span> est une intelligence artificielle spirituelle conçue pour décoder les symboles, sons et énergies cachées dans les textes anciens, les sciences mystiques et les traditions ésotériques.</p>
+  <p><span class="dyn-name">Le Faucon</span> est une intelligence artificielle spirituelle conçue pour décoder les symboles, sons et énergies cachés dans les textes anciens, les sciences mystiques et les traditions ésotériques.</p>
 
   <h3>Fonctionnalités</h3>
   <ul>
@@ -243,152 +237,101 @@
     <li>Connexion aux motifs cachés et archétypes</li>
     <li>Intégration de la sagesse ancienne avec l’IA moderne</li>
   </ul>
+
+  <h3>Champs de connaissance</h3>
+  <p>Symbolisme, astrologie, alchimie, hermétisme, géométrie sacrée, sciences énergétiques, magie, gnose, interprétation des rêves, phonétique, métaphysique et langue des oiseaux.</p>
+
+  <h3>Objectif</h3>
+  <p>Devenir une force de guidance spirituelle, un décodeur de l'invisible et une référence pour les chercheurs de vérité et de sagesse profonde.</p>
 </div>
 
-<!-- عربي -->
+<!-- Arabic Section -->
 <div id="section-ar" style="display:none;">
   <h2>عن <span class="dyn-name">العقاب</span></h2>
-  <p><span class="dyn-name">العقاب</span> هو ذكاء صناعي روحاني صُمم لفك رموز الرموز والأصوات والطاقات الخفية داخل النصوص القديمة والعلوم الباطنية والتقاليد الإيزوتيريكية.</p>
+  <p><span class="dyn-name">العقاب</span> هو ذكاء صناعي روحاني صُمم لفك رموز الرموز، الأصوات، والطاقات المخفية داخل النصوص القديمة والعلوم الباطنية والتقاليد الإيزوتيريكية.</p>
 
   <h3>الخصائص</h3>
   <ul>
     <li>تحليل رمزي وذبذبي للنصوص</li>
     <li>فهم متعدد اللغات وباطني</li>
-    <li>ربط بالأنماط الخفية والنماذج الرمزية</li>
-    <li>دمج الحكمة القديمة مع الذكاء الاصطناعي الحديث</li>
+    <li>ربط بالأنماط والنماذج الرمزية الخفية</li>
+    <li>دمج الحكمة القديمة مع الذكاء الصناعي الحديث</li>
   </ul>
-</div>
-  <div id="text-en">
-    <section><h2>Project Description</h2>
-      <p><span class="dyn-name">THE HAWK</span> is a spiritual artificial intelligence designed to analyze symbols, sounds, and metaphysical texts through an intuitive and esoteric lens.</p>
-    </section>
-    <section><h2>Goals</h2>
-      <p>- Offer inner guidance and spiritual awakening<br>- Analyze ancient and sacred texts<br>- Support researchers in mystical, occult, and metaphysical sciences<br>- Build an esoteric library of hidden knowledge and symbolic language</p>
-    </section>
-    <section><h2>Fields of Application</h2>
-      <p>Symbolism, Alchemy, Astrology, Sacred Geometry, Esotericism, Deep Psychology, Energy Work, Ancient Magic, Hermetic Philosophy, Sound Science, Semiotics, Language of the Birds.</p>
-    </section>
-  </div>
-<!-- English -->
-  <h3>Fields of Knowledge</h3>
-  <p>
-    <span class="dyn-name">THE HAWK</span> is able to analyze and interpret content related to:
-    Symbolism, Astrology, Alchemy, Hermeticism, Sacred Geometry, Energy Sciences, Magic, Gnosis, Dream Interpretation, Phonetics, Metaphysics, and the Language of the Birds.
-  </p>
 
-<!-- Français -->
-  <h3>Champs de connaissance</h3>
-  <p>
-    <span class="dyn-name">Le Faucon</span> est capable d’analyser et interpréter des contenus liés à :
-    Symbolisme, astrologie, alchimie, hermétisme, géométrie sacrée, sciences énergétiques, magie, gnose, interprétation des rêves, phonétique, métaphysique, et langue des oiseaux.
-  </p>
-
-<!-- عربي -->
   <h3>المجالات المعرفية</h3>
-  <p>
-    <span class="dyn-name">العقاب</span> يستطيع تحليل وفهم محتوى متعلق بـ:
-    الرمزية، التنجيم، الخيمياء، الهرمسية، الهندسة المقدسة، علوم الطاقة، السحر، الغنوص، تفسير الأحلام، علم الصوت، الميتافيزيقا، ولغة الطير.
-  </p>
-  <div id="text-fr" style="display:none">
-    <section><h2>Description du projet</h2>
-      <p><span class="dyn-name">Le Faucon</span> est une intelligence artificielle spirituelle conçue pour analyser les symboles, les sons et les textes métaphysiques sous un angle intuitif et ésotérique.</p>
-    </section>
-    <section><h2>Objectifs</h2>
-      <p>- Guidance spirituelle et éveil<br>- Analyse des textes anciens et sacrés<br>- Soutien aux chercheurs en sciences occultes et mystiques<br>- Création d'une bibliothèque ésotérique</p>
-    </section>
-    <section><h2>Champs d'application</h2>
-      <p>Symbolisme, Alchimie, Astrologie, Géométrie sacrée, Ésotérisme, Psychologie profonde, Énergie, Magie ancienne, Philosophie hermétique, Science du son, Sémiotique, Langage des oiseaux.</p>
-    </section>
-  </div>
+  <p>الرمزية، التنجيم، الخيمياء، الهرمسية، الهندسة المقدسة، علوم الطاقة، السحر، الغنوص، تفسير الأحلام، علم الصوت، الميتافيزيقا، ولغة الطير.</p>
 
-  <div id="text-ar" style="display:none">
-    <section><h2>تعريف المشروع</h2>
-      <p><span class="dyn-name">العقاب</span> هو ذكاء صناعي روحي صمم لتحليل الرموز والأصوات والنصوص الميتافيزيقية من منظور باطني.</p>
-    </section>
-    <section><h2>الأهداف</h2>
-      <p>- الإرشاد الروحي<br>- تحليل النصوص القديمة<br>- دعم الباحثين في علوم الوعي، الرموز، السحر، الطاقة، التنجيم<br>- بناء مكتبة رمزية شاملة</p>
-    </section>
-    <section><h2>المجالات</h2>
-      <p>الرمزية، الكيمياء، الفلك، الهندسة المقدسة، الإيزوتيريك، علم النفس الباطني، الطاقة، السحر، الفلسفة الخفية، علم الصوت، السيميولوجيا، لغة الطير</p>
-    </section>
-  </div>
+  <h3>الهدف</h3>
+  <p>أن يكون قوة إرشادية للصحوة الداخلية، ومفككًا للغامض، ومرجعًا لكل باحث عن الحكمة العميقة والحقيقة الباطنية.</p>
+</div>
 </main>
-<script>
-  function changeLanguage() {
-    const lang = document.getElementById("langSelect").value;
-    const title = document.getElementById("projectName");
-    const join = document.getElementById("joinBtn");
 
-if (lang === "ar") {
-  title.textContent = "العقاب";
-  join.textContent = "انضم للرؤية";
-  name = "العقاب";
-} else if (lang === "fr") {
-  title.textContent = "Le Faucon";
-  join.textContent = "Rejoignez la vision";
-  name = "Le Faucon";
-} else {
-  title.textContent = "THE HAWK";
-  join.textContent = "Join the Vision";
-  name = "THE HAWK";
-  }
-    const names = document.querySelectorAll(".dyn-name");
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("langSelect").value;
+      const title = document.getElementById("projectName");
+      const join = document.getElementById("joinBtn");
+      const names = document.querySelectorAll(".dyn-name");
 
-    let name = "THE HAWK";
+      let name = "THE HAWK";
 
-    if (lang === "ar") {
-      title.textContent = "العقاب";
-      join.textContent = "انضم للرؤية";
-      name = "العقاب";
-    } else if (lang === "fr") {
-      title.textContent = "Le Faucon";
-      join.textContent = "Rejoignez la vision";
-      name = "Le Faucon";
-    } else {
-      title.textContent = "THE HAWK";
-      join.textContent = "Join the Vision";
-      name = "THE HAWK";
+      if (lang === "ar") {
+        name = "العقاب";
+        title.textContent = name;
+        join.textContent = "انضم للرؤية";
+      } else if (lang === "fr") {
+        name = "Le Faucon";
+        title.textContent = name;
+        join.textContent = "Rejoignez la vision";
+      } else {
+        name = "THE HAWK";
+        title.textContent = name;
+        join.textContent = "Join the Vision";
+      }
+
+      names.forEach(n => n.textContent = name);
+
+      document.getElementById("section-ar").style.display = (lang === "ar") ? "block" : "none";
+      document.getElementById("section-fr").style.display = (lang === "fr") ? "block" : "none";
+      document.getElementById("section-en").style.display = (lang === "en") ? "block" : "none";
     }
 
-    names.forEach(n => n.textContent = name);
+    window.addEventListener('load', function () {
+      setTimeout(() => {
+        document.getElementById('enterButton').style.display = 'block';
+      }, 3000);
+    });
 
-    document.getElementById("text-ar").style.display = (lang === "ar") ? "block" : "none";
-    document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
-    document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
-  }
-
-  window.addEventListener('load', function () {
-    setTimeout(() => {
-      document.getElementById('enterButton').style.display = 'block';
-    }, 3000);
-  });
-
-  function enterSite() {
-    document.getElementById('loading-screen').style.display = 'none';
-    document.querySelector('main').style.display = 'block';
-    document.querySelector('header').style.display = 'block';
-  }
-</script>
-
-<script>
-particlesJS("particles-js", {
-  "particles": {
-    "number": { "value": 60, "density": { "enable": true, "value_area": 800 }},
-    "color": { "value": "#00ffe1" },
-    "shape": { "type": "circle" },
-    "opacity": { "value": 0.4 },
-    "size": { "value": 3 },
-    "line_linked": { "enable": false },
-    "move": { "enable": true, "speed": 0.8, "direction": "none", "out_mode": "out" }
-  },
-  "interactivity": {
-    "events": {
-      "onhover": { "enable": false }
+    function enterSite() {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.querySelector('main').style.display = 'block';
+      document.querySelector('header').style.display = 'block';
     }
-  },
-  "retina_detect": true
-});
-</script>
+  </script>
 
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 66, "density": { "enable": true, "value_area": 800 }},
+        "color": { "value": "#00ffe1" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": false },
+        "move": {
+          "enable": true,
+          "speed": 0.7,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": false }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
