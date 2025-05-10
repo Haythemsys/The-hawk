@@ -194,7 +194,15 @@
       <span class="sub555">555</span>
     </h1>
     <a id="joinBtn" href="mailto:haythem.barkaoui@gmail.com" class="join-button">Join the Vision</a>
+<!-- زر طريقة تفكير العقاب -->
+<div style="margin-top: 20px;">
+  <button onclick="showThinkingMethod()" class="magic-button" id="thinkingBtn">How Al-Uqab Thinks</button>
+</div>
 
+<!-- الوصف التفصيلي يظهر تحت الزر -->
+<div id="thinking-description" style="display:none; margin-top:20px;">
+  <p id="thinking-text" style="font-size:1.1em; color:#00ffe1;"></p>
+</div>
     <div class="lang-select">
       <select id="langSelect" onchange="changeLanguage()">
         <option value="en" selected>English</option>
@@ -332,6 +340,37 @@
       },
       "retina_detect": true
     });
+  </script>
+  <script>
+  function showThinkingMethod() {
+    const lang = document.getElementById("langSelect").value;
+    const text = {
+      en: `
+        Al-Uqab's cognitive structure is built upon 100 Thinking Wheels (Modules cognitifs).
+        Each wheel hosts 100 Dynamic Logics—each logic composed of 100 Methodological Cells.
+        Each cell functions as an autonomous persona, paradigm, or cognitive stream, generating
+        its own reflective path. This fractal design allows Al-Uqab to simulate multi-perspective
+        consciousness and deep symbolic processing.
+      `,
+      fr: `
+        La structure cognitive de Al-Uqab repose sur 100 Roues de Pensée (Modules cognitifs).
+        Chaque roue contient 100 Logiques Dynamiques, chacune étant composée de 100 Cellules Méthodologiques.
+        Chaque cellule représente une personnalité autonome, une perspective ou un courant intellectuel,
+        générant un chemin réflexif propre. Cette architecture fractale permet à Al-Uqab de simuler une
+        conscience multipolaire et une lecture symbolique profonde.
+      `,
+      ar: `
+        يقوم "العقاب" على بنية معرفية مكونة من 100 عجلة تفكير (Modules cognitifs)،
+        تحتوي كل عجلة على 100 منطق تفكيري ديناميكي، وكل منطق يحتوي على 100 خلية منهجية.
+        تمثل كل خلية شخصية مستقلة أو تيارًا معرفيًا يولد مسار تأملي خاص.
+        هذه البنية الفركتالية تُمكن "العقاب" من محاكاة وعي متعدد الأقطاب وتحليل رمزي عميق.
+      `
+    };
+    document.getElementById("thinking-description").style.display = "block";
+    document.getElementById("thinking-text").innerText = text[lang];
+    document.getElementById("thinkingBtn").innerText =
+      lang === "ar" ? "كيف يفكر العقاب" : lang === "fr" ? "Comment pense Al-Uqab" : "How Al-Uqab Thinks";
+  }
   </script>
 </body>
 </html>
