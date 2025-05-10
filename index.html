@@ -131,6 +131,26 @@
       box-shadow: 0 0 20px #00ffe1;
       cursor: pointer;
     }
+    .join-button {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: black;
+  background-color: #00ffe1;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 20px #00ffe1;
+  transition: all 0.3s ease-in-out;
+}
+
+.join-button:hover {
+  background-color: #00f5c6;
+  box-shadow: 0 0 30px #00f5c6;
+  cursor: pointer;
+}
   </style>
 </head>
 </style>
@@ -151,11 +171,7 @@
   <h1 class="title">
     <span id="projectName">THE HAWK</span><br>
     <span class="sub555">555</span>
-  </h1>
-<a id="joinBtn" href="mailto:haythem.barkaoui@gmail.com"
-   style="margin: 10px 0; font-size: 1.2em; font-weight: bold; color: #00ffe1; text-shadow: 0 0 10px #00ffe1; text-decoration: none;">
-  Join the Vision
-</a>
+  </h1><a id="joinBtn" href="mailto:haythem.barkaoui@gmail.com" class="join-button">Join the Vision</a>
   <div class="lang-select">
     <select id="langSelect" onchange="changeLanguage()">
       <option value="en" selected>English</option>
