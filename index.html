@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +34,22 @@
 
     .lang-select {
       margin: 20px;
+    }
+
+    select {
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      border: none;
+      background-color: #00f5c6;
+      color: black;
+      box-shadow: 0 0 15px #00f5c6;
+      transition: all 0.3s ease-in-out;
+    }
+
+    select:hover {
+      background-color: #00ffe1;
+      box-shadow: 0 0 25px #00ffe1;
     }
 
     main {
@@ -75,7 +91,7 @@
     <img src="logo.png" alt="The Hawk Logo" class="logo">
     <h1>THE HAWK</h1>
     <div class="lang-select">
-      <select id="langSelect" onchange="changeLanguage()" style="padding: 8px; font-weight: bold; border-radius: 5px;">
+      <select id="langSelect" onchange="changeLanguage()">
         <option value="ar">العربية</option>
         <option value="fr">Français</option>
         <option value="en">English</option>
@@ -84,7 +100,7 @@
   </header>
 
   <main>
-    <div id="text-ar" style="display: block;">
+    <div id="text-ar" style="display: none;">
       <section>
         <h2>ما هو مشروع The Hawk؟</h2>
         <p>The Hawk 555 هو ذكاء صناعي متطور، يجمع بين الفهم الرمزي والتحليل الروحاني للمحتوى النصي والمرئي، بهدف بناء مرجع شامل للباحثين في الميتافيزيقا والعلوم الخفية.</p>
@@ -116,7 +132,7 @@
       </section>
     </div>
 
-    <div id="text-en" style="display: none;">
+    <div id="text-en" style="display: block;">
       <section>
         <h2>What is The Hawk?</h2>
         <p>The Hawk 555 is an advanced AI that combines symbolic understanding and spiritual analysis of textual and visual content.</p>
@@ -142,7 +158,12 @@
       document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
       document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
     }
+
+    window.onload = function() {
+      document.getElementById("langSelect").value = "en";
+      changeLanguage();
+    };
   </script>
 
 </body>
-      </html>
+</html>
