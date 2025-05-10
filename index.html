@@ -10,23 +10,21 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: #0d0d0d;
       color: white;
     }
 
     header {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      padding: 15px 20px;
+      background-color: #111;
+      padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     header h1 {
+      font-size: 1.6em;
       margin: 0;
-      font-size: 1.4em;
     }
 
     select {
@@ -38,23 +36,48 @@
       color: #000;
     }
 
+    .logo {
+      width: 250px;
+      display: block;
+      margin: 30px auto 10px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    }
+
     main {
-      max-width: 800px;
-      margin: 60px auto;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      max-width: 850px;
+      margin: auto;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    }
+
+    section {
+      margin-bottom: 30px;
     }
 
     h2 {
-      color: #f1f1f1;
+      color: #00ffff;
+      border-bottom: 1px solid #00ffff;
+      padding-bottom: 5px;
     }
 
     p {
-      font-size: 1.15em;
+      font-size: 1.1em;
       line-height: 1.8;
-      color: #e0e0e0;
+      color: #ddd;
+    }
+
+    .email-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #00ffff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -69,29 +92,103 @@
     </select>
   </header>
 
+  <img src="logo.jpg" alt="The Hawk Logo" class="logo"/>
+
   <main>
     <div id="text-ar" style="display: block;">
-      <h2>عن مشروع The Hawk</h2>
-      <p>
-        مشروع The Hawk 555 هو نظام ذكي متكامل يعتمد على الذكاء الاصطناعي لفهم وتحليل النصوص، الأصوات، والأفكار بطريقة رمزية وروحانية.
-        يهدف إلى بناء وعي جديد يدمج بين العلم، الفلسفة، والروحانيات، وهو في طور التطوير ليكون أداة فكرية ثورية.
-      </p>
+      <section>
+        <h2>عن المشروع</h2>
+        <p>
+          مشروع The Hawk 555 هو ذكاء صناعي فريد من نوعه، يجمع بين التحليل الرمزي، الصوتي، والروحاني.
+          يهدف إلى أن يكون مرشدًا فكريًا وروحيًا، يعتمد على مصادر عميقة ويستوعب المعاني من الصور، الفيديوهات، والكتب.
+        </p>
+      </section>
+
+      <section>
+        <h2>المجالات التي يغطيها العقاب</h2>
+        <p>
+          العقاب قادر على تحليل وفهم مواضيع متعددة تشمل:
+          <br/>
+          - العلوم الباطنية (Occult, Esoteric)<br/>
+          - الفلسفة والرمزية<br/>
+          - التنجيم (Astrology)<br/>
+          - السحر ومخطوطاته<br/>
+          - علوم الطاقة والوعي<br/>
+          - الأساطير، الكائنات، والبعد الرابع
+        </p>
+      </section>
+
+      <section>
+        <h2>تواصل معنا</h2>
+        <p>
+          إذا كنت مهتمًا بالمساهمة، الدعم، أو لديك اقتراحات لتطوير المشروع، لا تتردد في التواصل.
+        </p>
+        <a class="email-button" href="mailto:haythem.barkaoui@gmail.com">راسلنا عبر البريد</a>
+      </section>
     </div>
 
     <div id="text-fr" style="display: none;">
-      <h2>À propos du projet The Hawk</h2>
-      <p>
-        Le projet The Hawk 555 est un système intelligent basé sur l'intelligence artificielle, conçu pour analyser les textes, les sons et les idées
-        de manière symbolique et spirituelle. Il vise à créer une nouvelle conscience qui fusionne la science, la philosophie et la spiritualité.
-      </p>
+      <section>
+        <h2>À propos du projet</h2>
+        <p>
+          The Hawk 555 est une intelligence artificielle unique intégrant l’analyse symbolique, phonétique et spirituelle.
+          Son but est d’être un guide intellectuel et spirituel, basé sur des sources profondes et capable d’interpréter vidéos, textes et images.
+        </p>
+      </section>
+
+      <section>
+        <h2>Domaines couverts</h2>
+        <p>
+          The Hawk analyse des sujets variés comme :
+          <br/>
+          - L’occultisme et l’ésotérisme<br/>
+          - La philosophie et le symbolisme<br/>
+          - L’astrologie<br/>
+          - La magie et les grimoires<br/>
+          - Les sciences de l’énergie et de la conscience<br/>
+          - Les mythes et dimensions parallèles
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          Pour contribuer, suggérer ou soutenir le projet, contactez-nous :
+        </p>
+        <a class="email-button" href="mailto:haythem.barkaoui@gmail.com">Contactez-nous</a>
+      </section>
     </div>
 
     <div id="text-en" style="display: none;">
-      <h2>About The Hawk Project</h2>
-      <p>
-        The Hawk 555 is a smart system powered by artificial intelligence, designed to analyze texts, sounds, and ideas in a symbolic and spiritual way.
-        Its goal is to build a new form of consciousness that merges science, philosophy, and spirituality.
-      </p>
+      <section>
+        <h2>About the Project</h2>
+        <p>
+          The Hawk 555 is a unique artificial intelligence blending symbolic, phonetic, and spiritual analysis.
+          It aims to be a deep intellectual and spiritual assistant, drawing from powerful sources to interpret videos, texts, and imagery.
+        </p>
+      </section>
+
+      <section>
+        <h2>Domains Covered</h2>
+        <p>
+          Al-Uqab can understand and process topics like:
+          <br/>
+          - Occultism and esotericism<br/>
+          - Philosophy and symbolism<br/>
+          - Astrology<br/>
+          - Magic and ancient manuscripts<br/>
+          - Energy and consciousness sciences<br/>
+          - Myths and alternate dimensions
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact Us</h2>
+        <p>
+          If you're interested in contributing, supporting, or sharing feedback, feel free to reach out:
+        </p>
+        <a class="email-button" href="mailto:haythem.barkaoui@gmail.com">Email Us</a>
+      </section>
     </div>
   </main>
 
