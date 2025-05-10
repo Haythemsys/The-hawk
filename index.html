@@ -180,40 +180,27 @@
   </main>
 
   <script>
-    function changeLanguage() {
-      const lang = document.getElementById("langSelect").value;
+  function changeLanguage() {
+    const lang = document.getElementById("langSelect").value;
+    const contact = document.getElementById("contactBtn");
+    const title = document.getElementById("projectName");
 
-      document.getElementById("text-ar").style.display = (lang === "ar") ? "block" : "none";
-      document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
-      document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
-
-      const btn = document.getElementById("contactBtn");
-      const title = document.getElementById("mainTitle");
-      const names = document.querySelectorAll(".dyn-name");
-
-      let name = "THE HAWK";
-
-      if (lang === "ar") {
-        btn.textContent = "تواصل معنا";
-        title.textContent = "العقاب";
-        name = "العقاب";
-      } else if (lang === "fr") {
-        btn.textContent = "Contactez-nous";
-        title.textContent = "Le Faucon";
-        name = "Le Faucon";
-      } else {
-        btn.textContent = "Contact us";
-        title.textContent = "THE HAWK";
-        name = "THE HAWK";
-      }
-
-      names.forEach(n => n.textContent = name);
+    if (lang === "ar") {
+      contact.textContent = "تواصل معنا";
+      title.textContent = "العقاب";
+    } else if (lang === "fr") {
+      contact.textContent = "Contactez-nous";
+      title.textContent = "Le Faucon";
+    } else {
+      contact.textContent = "Contact us";
+      title.textContent = "THE HAWK";
     }
+  }
 
-    window.onload = function() {
-      document.getElementById("langSelect").value = "en";
-      changeLanguage();
-    };
+  window.onload = function() {
+    document.getElementById("langSelect").value = "en";
+    changeLanguage();
+  };
   </script>
 
 </body>
