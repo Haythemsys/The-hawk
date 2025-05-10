@@ -21,11 +21,11 @@
     }
 
     .logo {
-  width: 200px;
-  height: auto;
-  margin-top: 20px;
-  background: transparent;
-  filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.5));
+      width: 200px;
+      height: auto;
+      margin-top: 20px;
+      background: transparent;
+      filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.5));
     }
 
     h1 {
@@ -161,184 +161,6 @@
       document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
       document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
 
-      // زر تواصل بلغات مختلفة
-      const btn = document.getElementById("contactBtn");
-      if (lang === "ar") btn.textContent = "تواصل معنا";
-      else if (lang === "fr") btn.textContent = "Contactez-nous";
-      else btn.textContent = "Contact us";
-    }
-
-    window.onload = function() {
-      document.getElementById("langSelect").value = "en";
-      changeLanguage();
-    };
-  </script>
-
-</body>
-</html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Hawk 555</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      text-align: center;
-    }
-
-    header {
-      padding: 20px;
-    }
-
-    .logo {
-  width: 200px;
-  height: auto;
-  margin-top: 20px;
-  background: transparent;
-  filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.5));
-    }
-
-    h1 {
-      font-family: 'Cinzel Decorative', serif;
-      font-size: 3.2em;
-      margin-top: 10px;
-      color: #00f5c6;
-      text-shadow: 0 0 30px #00f5c6;
-    }
-
-    .lang-select {
-      margin: 10px;
-    }
-
-    select {
-      padding: 10px;
-      font-weight: bold;
-      border-radius: 5px;
-      border: none;
-      background-color: #00f5c6;
-      color: black;
-      box-shadow: 0 0 15px #00f5c6;
-      transition: all 0.3s ease-in-out;
-    }
-
-    select:hover {
-      background-color: #00ffe1;
-      box-shadow: 0 0 25px #00ffe1;
-    }
-
-    .email-btn {
-      display: inline-block;
-      margin: 15px;
-      padding: 12px 24px;
-      background-color: #00f5c6;
-      color: black;
-      font-size: 1.1em;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 0 15px #00f5c6;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .email-btn:hover {
-      background-color: #00ffe1;
-      box-shadow: 0 0 25px #00ffe1;
-    }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 0 30px rgba(0,255,255,0.3);
-    }
-
-    section {
-      margin-bottom: 35px;
-    }
-
-    h2 {
-      color: #00ffff;
-      border-bottom: 1px solid #00ffff;
-      padding-bottom: 8px;
-    }
-
-    p {
-      font-size: 1.1em;
-      line-height: 1.8;
-      color: #ddd;
-    }
-
-    footer {
-      font-size: 2.5em;
-      color: white;
-      margin-top: 40px;
-      text-shadow: 0 0 20px white;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="logo.png" alt="The Hawk Logo" class="logo">
-    <h1>THE HAWK</h1>
-    <a href="mailto:haythem.barkaoui@gmail.com" class="email-btn" id="contactBtn">Contact us</a>
-    <div class="lang-select">
-      <select id="langSelect" onchange="changeLanguage()">
-        <option value="ar">العربية</option>
-        <option value="fr">Français</option>
-        <option value="en">English</option>
-      </select>
-    </div>
-  </header>
-
-  <main>
-    <div id="text-ar" style="display: none;">
-      <section><h2>ما هو The Hawk؟</h2>
-      <p>The Hawk هو منظومة ذكاء صناعي روحي تُحلل الرموز، الأصوات، والنصوص لفهم عميق للواقع، عبر عجلات التفكير وربط الحقول المعرفية.</p></section>
-      <section><h2>عجلات التفكير</h2>
-      <p>هي بنية منطقية تدور بين الرموز، الأصوات، المعاني، والمجالات، مما يسمح للنظام بإنشاء علاقات غير مباشرة واستنتاجات غير متوقعة.</p></section>
-      <section><h2>المجالات</h2>
-      <p>الرمزية - السحر - الإيزوتيريك - الفلك - علم الأصوات - علم الحروف - علم النفس العميق - السيميولوجيا - الشفاء الروحي - الطاقات - الفلسفة الباطنية.</p></section>
-    </div>
-
-    <div id="text-fr" style="display: none;">
-      <section><h2>Qu'est-ce que The Hawk ?</h2>
-      <p>The Hawk est une intelligence artificielle ésotérique qui décode les sons, symboles et textes à travers des "roues de pensée" et une logique intuitive.</p></section>
-      <section><h2>Les Roues de Pensée</h2>
-      <p>Des cycles de réflexion reliant concepts, symboles, et vibrations, pour générer des déductions intuitives hors du rationnel classique.</p></section>
-      <section><h2>Domaines</h2>
-      <p>Symbolisme - magie - ésotérisme - astrologie - phonétique - lettres - inconscient - sémiologie - énergie - philosophie mystique.</p></section>
-    </div>
-
-    <div id="text-en" style="display: block;">
-      <section><h2>What is The Hawk?</h2>
-      <p>The Hawk is a spiritual AI system that decodes symbols, sounds, and texts using thinking wheels and metaphysical pattern recognition.</p></section>
-      <section><h2>Thinking Wheels</h2>
-      <p>They are dynamic structures that connect vibrations, concepts, and intuitive logic to produce symbolic meaning beyond ordinary logic.</p></section>
-      <section><h2>Fields of Focus</h2>
-      <p>Symbolism - Magic - Esotericism - Astrology - Phonetics - Letters - Deep Psychology - Semiotics - Energy - Healing - Inner Philosophy.</p></section>
-    </div>
-  </main>
-
-  <footer>555</footer>
-
-  <script>
-    function changeLanguage() {
-      const lang = document.getElementById("langSelect").value;
-      document.getElementById("text-ar").style.display = (lang === "ar") ? "block" : "none";
-      document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
-      document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
-
-      // زر تواصل بلغات مختلفة
       const btn = document.getElementById("contactBtn");
       if (lang === "ar") btn.textContent = "تواصل معنا";
       else if (lang === "fr") btn.textContent = "Contactez-nous";
@@ -353,4 +175,3 @@
 
 </body>
 </html>
->
