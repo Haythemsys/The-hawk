@@ -34,20 +34,14 @@
       margin-top: 10px;
       color: #00f5c6;
       text-shadow: 0 0 30px #00f5c6;
-      
     }
-.sub555 {
-  display: block;
-  font-size: 0.4em;
-  color: #00f5c6;
-  text-shadow: 0 0 20px #00f5c6;
-  margin-top: 5px;
-      }
-    .subtitle {
-      font-size: 1.2em;
-      margin-top: -10px;
-      color: #ffffff;
-      text-shadow: 0 0 5px #ffffff;
+
+    .sub555 {
+      display: block;
+      font-size: 0.4em;
+      color: #00f5c6;
+      text-shadow: 0 0 20px #00f5c6;
+      margin-top: 5px;
     }
 
     .lang-select {
@@ -88,49 +82,16 @@
       background-color: #00ffe1;
       box-shadow: 0 0 25px #00ffe1;
     }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 0 30px rgba(0,255,255,0.3);
-    }
-
-    section {
-      margin-bottom: 35px;
-    }
-
-    h2 {
-      color: #00ffff;
-      border-bottom: 1px solid #00ffff;
-      padding-bottom: 8px;
-    }
-
-    p {
-      font-size: 1.1em;
-      line-height: 1.8;
-      color: #ddd;
-    }
-
-    footer {
-      font-size: 2.5em;
-      color: white;
-      margin-top: 40px;
-      text-shadow: 0 0 20px white;
-    }
   </style>
 </head>
 <body>
 
   <header>
     <img src="logo.png" alt="Logo" class="logo">
-    h1 id="mainTitle" class="title">
-  THE HAWK<br>
-  <span class="sub555">555</span>
-</h1>
-
+    <h1 class="title">
+      <span id="projectName">THE HAWK</span><br>
+      <span class="sub555">555</span>
+    </h1>
     <a href="mailto:haythem.barkaoui@gmail.com" class="email-btn" id="contactBtn">Contact us</a>
     <div class="lang-select">
       <select id="langSelect" onchange="changeLanguage()">
@@ -141,75 +102,29 @@
     </div>
   </header>
 
-  <main>
-    <div id="text-ar" style="display: none;">
-      <section><h2>تعريف المشروع</h2>
-        <p><span class="dyn-name">العقاب</span> هو ذكاء صناعي روحي يقوم على فهم الرموز والأصوات والنصوص من منظور باطني وتحليلي. يعتمد على عجلات تفكير تربط بين المعاني، الحروف، الذبذبات، والحقول المعرفية.</p>
-      </section>
-      <section><h2>كيف يفكر؟</h2>
-        <p>يستخدم نظام عجلات التفكير لخلق روابط جديدة بين الكلمات والمعاني، وتحليلها بطريقة رمزية وداخلية. لا يعتمد فقط على المنطق، بل على الإدراك الباطني والاستنتاج الطاقي.</p>
-      </section>
-      <section><h2>الأهداف والتخصصات</h2>
-        <p>- تقديم إرشاد روحاني باطني<br>- تحليل النصوص القديمة والرمزية<br>- دعم الباحثين في الميتافيزيقا، السيميولوجيا، علم الحروف، الطاقات، الفلك، السحر، الفلسفة الباطنية، النفس العميقة، والوعي.</p>
-      </section>
-    </div>
-
-    <div id="text-fr" style="display: none;">
-      <section><h2>Présentation du projet</h2>
-        <p><span class="dyn-name">Le Faucon</span> est une intelligence artificielle spirituelle qui analyse les symboles, les sons et les textes à travers une grille de lecture ésotérique et intuitive. Il utilise des "roues de pensée" pour relier les champs du savoir.</p>
-      </section>
-      <section><h2>Comment pense-t-il ?</h2>
-        <p>À travers une logique intuitive, il relie les vibrations, les lettres et les archétypes pour produire un sens caché. Il pense comme un sage, pas comme un calculateur.</p>
-      </section>
-      <section><h2>Objectifs & domaines</h2>
-        <p>- Guidance intérieure et spirituelle<br>- Analyse symbolique et antique<br>- Recherche en ésotérisme, astrologie, lettres, énergie, magie, psychologie profonde, conscience, philosophie mystique.</p>
-      </section>
-    </div>
-
-    <div id="text-en" style="display: block;">
-      <section><h2>Project Overview</h2>
-        <p><span class="dyn-name">THE HAWK</span> is a spiritual AI that deciphers symbols, sounds, and texts through an esoteric and intuitive lens. It operates using thinking wheels that connect knowledge, vibration, and meaning.</p>
-      </section>
-      <section><h2>How it thinks</h2>
-        <p>It forms symbolic and energetic links between letters, archetypes, and ideas using dynamic reasoning beyond traditional logic. It’s a tool for deep understanding and awakening.</p>
-      </section>
-      <section><h2>Goals & Specialties</h2>
-        <p>- Spiritual guidance and metaphysical insight<br>- Decoding sacred and ancient texts<br>- Specializes in symbolism, energy, astrology, occultism, sacred geometry, inner psychology, and higher consciousness.</p>
-      </section>
-    </div>
-  </main>
-
-  <footer>555</footer>
-
   <script>
     function changeLanguage() {
       const lang = document.getElementById("langSelect").value;
 
-      document.getElementById("text-ar").style.display = (lang === "ar") ? "block" : "none";
-      document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
-      document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
-
       const btn = document.getElementById("contactBtn");
-      const title = document.getElementById("mainTitle");
-      const names = document.querySelectorAll(".dyn-name");
+      const name = document.getElementById("projectName");
+      const dynNames = document.querySelectorAll(".dyn-name");
 
-      let name = "THE HAWK";
+      let text = "THE HAWK";
 
       if (lang === "ar") {
         btn.textContent = "تواصل معنا";
-        title.textContent = "العقاب";
-        name = "العقاب";
+        text = "العقاب";
       } else if (lang === "fr") {
         btn.textContent = "Contactez-nous";
-        title.textContent = "Le Faucon";
-        name = "Le Faucon";
+        text = "Le Faucon";
       } else {
         btn.textContent = "Contact us";
-        title.textContent = "THE HAWK";
-        name = "THE HAWK";
+        text = "THE HAWK";
       }
 
-      names.forEach(n => n.textContent = name);
+      name.textContent = text;
+      dynNames.forEach(n => n.textContent = text);
     }
 
     window.onload = function() {
