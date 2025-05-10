@@ -165,8 +165,11 @@
       if (lang === "ar") btn.textContent = "تواصل معنا";
       else if (lang === "fr") btn.textContent = "Contactez-nous";
       else btn.textContent = "Contact us";
-    }
-
+    const title = document.getElementById("mainTitle");
+if (lang === "ar") title.textContent = "العقاب";
+else if (lang === "fr") title.textContent = "Le Faucon";
+else title.textContent = "THE HAWK";
+        } 
     window.onload = function() {
       document.getElementById("langSelect").value = "en";
       changeLanguage();
