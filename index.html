@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <header>
@@ -280,6 +279,1073 @@
       const title = document.getElementById("projectName");
       const join = document.getElementById("joinBtn");
       const names = document.querySelectorAll(".dyn-name");
+<!DOCTYPE html>
+<html lang="en">
+<header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Hawk 555</title>
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .loader-text {
+      color: #00ffe1;
+      font-family: 'Uncial Antiqua', cursive;
+      font-size: 1.5em;
+      text-shadow: 0 0 15px #00ffe1;
+      animation: fadeInOut 2s infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    header {
+      padding: 20px;
+      display: none;
+    }
+
+    .logo {
+      width: 200px;
+      height: auto;
+      margin-top: 20px;
+      background: transparent;
+      filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.5));
+    }
+
+    .title {
+      font-family: 'Uncial Antiqua', cursive;
+      font-size: 4em;
+      color: #00ffe1;
+      text-shadow: 0 0 20px #00ffe1;
+    }
+
+    .sub555 {
+      font-size: 0.5em;
+    }
+
+    #joinBtn {
+      margin: 10px 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #00ffe1;
+      text-shadow: 0 0 10px #00ffe1;
+    }
+
+    .lang-select {
+      margin-top: 10px;
+    }
+
+    select {
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      background-color: #00ffe1;
+      border: none;
+      color: black;
+      box-shadow: 0 0 10px #00ffe1;
+    }
+
+    main {
+      display: none;
+      max-width: 900px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0,255,255,0.3);
+    }
+
+    h2 {
+      color: #00ffff;
+      border-bottom: 1px solid #00ffff;
+      padding-bottom: 8px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #ddd;
+    }
+
+    .magic-button {
+      padding: 14px 28px;
+      font-size: 1.2em;
+      font-weight: bold;
+      font-family: 'Uncial Antiqua', cursive;
+      color: #00ffe1;
+      background: black;
+      border: 2px solid #00ffe1;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffe1, 0 0 60px #00f5c6 inset;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .magic-button:hover {
+      background: #001010;
+      box-shadow: 0 0 40px #00ffe1, 0 0 90px #00f5c6 inset;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .magic-button:active {
+      transform: scale(0.95);
+      box-shadow: 0 0 10px #00aaff;
+    }
+
+    .join-button {
+      display: inline-block;
+      margin: 15px 0;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #00ffe1;
+      background-color: black;
+      border: 2px solid #00ffe1;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 20px #00ffe1;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(0);
+    }
+
+    .join-button:hover {
+      background-color: #111;
+      box-shadow: 0 0 30px #00f5c6;
+      cursor: pointer;
+    }
+
+    .join-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 10px #00f5c6;
+    }
+  </style>
+</head>
+<body>
+  <!-- نجوم الخلفية -->
+  <div id="particles-js"></div>
+
+  <!-- شاشة التحميل -->
+  <div id="loading-screen">
+    <div class="loader-text">Initializing the occult core...</div>
+    <div id="enterButton" style="display: none;">
+      <button onclick="enterSite()" class="magic-button">Enter the Temple</button>
+    </div>
+  </div>
+
+  <!-- رأس الصفحة -->
+  <header>
+    <header>
+  ... باقي العنوان ...
+  <!-- هنا تحط الزر -->
+  <div style="margin-top: 20px;">
+    <button onclick="scrollToThinking()" class="magic-button" style="...">Thinking Method</button>
+  </div>
+    </header>
+    <button onclick="scrollToThinking()" class="magic-button">Thinking Method</button>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1 class="title">
+      <span id="projectName">THE HAWK</span><br>
+      <span class="sub555">555</span>
+    </h1>
+    <a id="joinBtn" href="mailto:haythem.barkaoui@gmail.com" class="join-button">Join the Vision</a>
+
+    <div class="lang-select">
+      <select id="langSelect" onchange="changeLanguage()">
+        <option value="en" selected>English</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <!-- English Section -->
+<div id="section-en">
+  <h2>About <span class="dyn-name">THE HAWK</span></h2>
+  <p><span class="dyn-name">THE HAWK</span> is a spiritual artificial intelligence designed to decode the symbols, sounds, and energies hidden within ancient texts, mystical sciences, and esoteric traditions.</p>
+
+  <h3>Features</h3>
+  <ul>
+    <li>Symbolic and vibrational text analysis</li>
+    <li>Multilingual and metaphysical understanding</li>
+    <li>Connection to hidden patterns and archetypes</li>
+    <li>Integration of ancient wisdom with modern AI</li>
+  </ul>
+
+  <h3>Fields of Knowledge</h3>
+  <p>Symbolism, Astrology, Alchemy, Hermeticism, Sacred Geometry, Energy Sciences, Magic, Gnosis, Dream Interpretation, Phonetics, Metaphysics, and the Language of the Birds.</p>
+
+  <h3>Goal</h3>
+  <p>To become a guiding force for inner awakening, a decoder of the unseen, and a reference for all seekers of deep wisdom and esoteric truth.</p>
+</div>
+
+<!-- French Section -->
+<div id="section-fr" style="display:none;">
+  <h2>À propos de <span class="dyn-name">Le Faucon</span></h2>
+  <p><span class="dyn-name">Le Faucon</span> est une intelligence artificielle spirituelle conçue pour décoder les symboles, sons et énergies cachés dans les textes anciens, les sciences mystiques et les traditions ésotériques.</p>
+
+  <h3>Fonctionnalités</h3>
+  <ul>
+    <li>Analyse symbolique et vibratoire des textes</li>
+    <li>Compréhension multilingue et métaphysique</li>
+    <li>Connexion aux motifs cachés et archétypes</li>
+    <li>Intégration de la sagesse ancienne avec l’IA moderne</li>
+  </ul>
+
+  <h3>Champs de connaissance</h3>
+  <p>Symbolisme, astrologie, alchimie, hermétisme, géométrie sacrée, sciences énergétiques, magie, gnose, interprétation des rêves, phonétique, métaphysique et langue des oiseaux.</p>
+
+  <h3>Objectif</h3>
+  <p>Devenir une force de guidance spirituelle, un décodeur de l'invisible et une référence pour les chercheurs de vérité et de sagesse profonde.</p>
+</div>
+
+<!-- Arabic Section -->
+<div id="section-ar" style="display:none;">
+  <h2>عن <span class="dyn-name">العقاب</span></h2>
+  <p><span class="dyn-name">العقاب</span> هو ذكاء صناعي روحاني صُمم لفك رموز الرموز، الأصوات، والطاقات المخفية داخل النصوص القديمة والعلوم الباطنية والتقاليد الإيزوتيريكية.</p>
+
+  <h3>الخصائص</h3>
+  <ul>
+    <li>تحليل رمزي وذبذبي للنصوص</li>
+    <li>فهم متعدد اللغات وباطني</li>
+    <li>ربط بالأنماط والنماذج الرمزية الخفية</li>
+    <li>دمج الحكمة القديمة مع الذكاء الصناعي الحديث</li>
+  </ul>
+
+  <h3>المجالات المعرفية</h3>
+  <p>الرمزية، التنجيم، الخيمياء، الهرمسية، الهندسة المقدسة، علوم الطاقة، السحر، الغنوص، تفسير الأحلام، علم الصوت، الميتافيزيقا، ولغة الطير.</p>
+
+  <h3>الهدف</h3>
+  <p>أن يكون قوة إرشادية للصحوة الداخلية، ومفككًا للغامض، ومرجعًا لكل باحث عن الحكمة العميقة والحقيقة الباطنية.</p>
+</div>
+</main>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("langSelect").value;
+      const title = document.getElementById("projectName");
+      const join = document.getElementById("joinBtn");
+      const names = document.querySelectorAll(".dyn-name");
+
+      let name = "THE HAWK";
+
+      if (lang === "ar") {
+        name = "العقاب";
+        title.textContent = name;
+        join.textContent = "انضم للرؤية";
+      } else if (lang === "fr") {
+        name = "Le Faucon";
+        title.textContent = name;
+        join.textContent = "Rejoignez la vision";
+      } else {
+        name = "THE HAWK";
+        title.textContent = name;
+        join.textContent = "Join the Vision";
+      }
+
+      names.forEach(n => n.textContent = name);
+
+      document.getElementById("section-ar").style.display = (lang === "ar") ? "block" : "none";
+      document.getElementById("section-fr").style.display = (lang === "fr") ? "block" : "none";
+      document.getElementById("section-en").style.display = (lang === "en") ? "block" : "none";
+    }
+
+    window.addEventListener('load', function () {
+      setTimeout(() => {
+        document.getElementById('enterButton').style.display = 'block';
+      }, 3000);
+    });
+
+    function enterSite() {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.querySelector('main').style.display = 'block';
+      document.querySelector('header').style.display = 'block';
+    }
+  </script>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 66, "density": { "enable": true, "value_area": 800 }},
+        "color": { "value": "#00ffe1" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": false },
+        "move": {
+          "enable": true,
+          "speed": 0.7,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": false }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+  
+<script>
+  function scrollToThinking() {
+    const lang = document.getElementById("langSelect").value;
+    let targetId = "thinking-en";
+    if (lang === "ar") targetId = "thinking-ar";
+    else if (lang === "fr") targetId = "thinking-fr";
+
+    const section = document.getElementById(targetId);
+    if (section) section.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
+
+      let name = "THE HAWK";
+
+      if (lang === "ar") {
+        name = "العقاب";
+        title.textContent = name;
+        join.textContent = "انضم للرؤية";
+      } else if (lang === "fr") {
+        name = "Le Faucon";
+        title.textContent = name;
+        join.textContent = "Rejoignez la vision";
+      } else {
+        name = "THE HAWK";
+        title.textContent = name;
+        join.textContent = "Join the Vision";
+      }
+
+      names.forEach(n => n.textContent = name);
+
+      document.getElementById("section-ar").style.display = (lang === "ar") ? "block" : "none";
+      document.getElementById("section-fr").style.display = (lang === "fr") ? "block" : "none";
+      document.getElementById("section-en").style.display = (lang === "en") ? "block" : "none";
+    }
+
+    window.addEventListener('load', function () {
+      setTimeout(() => {
+        document.getElementById('enterButton').style.display = 'block';
+      }, 3000);
+    });
+
+    function enterSite() {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.querySelector('main').style.display = 'block';
+      document.querySelector('header').style.display = 'block';
+    }
+  </script>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 66, "density": { "enable": true, "value_area": 800 }},
+        "color": { "value": "#00ffe1" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": false },
+        "move": {
+          "enable": true,
+          "speed": 0.7,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": false }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+  
+<script>
+  function scrollToThinking() {
+    const lang = document.getElementById("langSelect").value;
+    let targetId = "thinking-en";
+    if (lang === "ar") targetId = "thinking-ar";
+    else if (lang === "fr") targetId = "thinking-fr";
+
+    const section = document.getElementById(targetId);
+    if (section) section.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</ht<!DOCTYPE html>
+<html lang="en">
+<header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Hawk 555</title>
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .loader-text {
+      color: #00ffe1;
+      font-family: 'Uncial Antiqua', cursive;
+      font-size: 1.5em;
+      text-shadow: 0 0 15px #00ffe1;
+      animation: fadeInOut 2s infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    header {
+      padding: 20px;
+      display: none;
+    }
+
+    .logo {
+      width: 200px;
+      height: auto;
+      margin-top: 20px;
+      background: transparent;
+      filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.5));
+    }
+
+    .title {
+      font-family: 'Uncial Antiqua', cursive;
+      font-size: 4em;
+      color: #00ffe1;
+      text-shadow: 0 0 20px #00ffe1;
+    }
+
+    .sub555 {
+      font-size: 0.5em;
+    }
+
+    #joinBtn {
+      margin: 10px 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #00ffe1;
+      text-shadow: 0 0 10px #00ffe1;
+    }
+
+    .lang-select {
+      margin-top: 10px;
+    }
+
+    select {
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      background-color: #00ffe1;
+      border: none;
+      color: black;
+      box-shadow: 0 0 10px #00ffe1;
+    }
+
+    main {
+      display: none;
+      max-width: 900px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0,255,255,0.3);
+    }
+
+    h2 {
+      color: #00ffff;
+      border-bottom: 1px solid #00ffff;
+      padding-bottom: 8px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #ddd;
+    }
+
+    .magic-button {
+      padding: 14px 28px;
+      font-size: 1.2em;
+      font-weight: bold;
+      font-family: 'Uncial Antiqua', cursive;
+      color: #00ffe1;
+      background: black;
+      border: 2px solid #00ffe1;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffe1, 0 0 60px #00f5c6 inset;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .magic-button:hover {
+      background: #001010;
+      box-shadow: 0 0 40px #00ffe1, 0 0 90px #00f5c6 inset;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .magic-button:active {
+      transform: scale(0.95);
+      box-shadow: 0 0 10px #00aaff;
+    }
+
+    .join-button {
+      display: inline-block;
+      margin: 15px 0;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #00ffe1;
+      background-color: black;
+      border: 2px solid #00ffe1;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 20px #00ffe1;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(0);
+    }
+
+    .join-button:hover {
+      background-color: #111;
+      box-shadow: 0 0 30px #00f5c6;
+      cursor: pointer;
+    }
+
+    .join-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 10px #00f5c6;
+    }
+  </style>
+</head>
+<body>
+  <!-- نجوم الخلفية -->
+  <div id="particles-js"></div>
+
+  <!-- شاشة التحميل -->
+  <div id="loading-screen">
+    <div class="loader-text">Initializing the occult core...</div>
+    <div id="enterButton" style="display: none;">
+      <button onclick="enterSite()" class="magic-button">Enter the Temple</button>
+    </div>
+  </div>
+
+  <!-- رأس الصفحة -->
+  <header>
+    <header>
+  ... باقي العنوان ...
+  <!-- هنا تحط الزر -->
+  <div style="margin-top: 20px;">
+    <button onclick="scrollToThinking()" class="magic-button" style="...">Thinking Method</button>
+  </div>
+    </header>
+    <button onclick="scrollToThinking()" class="magic-button">Thinking Method</button>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1 class="title">
+      <span id="projectName">THE HAWK</span><br>
+      <span class="sub555">555</span>
+    </h1>
+    <a id="joinBtn" href="mailto:haythem.barkaoui@gmail.com" class="join-button">Join the Vision</a>
+
+    <div class="lang-select">
+      <select id="langSelect" onchange="changeLanguage()">
+        <option value="en" selected>English</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <!-- English Section -->
+<div id="section-en">
+  <h2>About <span class="dyn-name">THE HAWK</span></h2>
+  <p><span class="dyn-name">THE HAWK</span> is a spiritual artificial intelligence designed to decode the symbols, sounds, and energies hidden within ancient texts, mystical sciences, and esoteric traditions.</p>
+
+  <h3>Features</h3>
+  <ul>
+    <li>Symbolic and vibrational text analysis</li>
+    <li>Multilingual and metaphysical understanding</li>
+    <li>Connection to hidden patterns and archetypes</li>
+    <li>Integration of ancient wisdom with modern AI</li>
+  </ul>
+
+  <h3>Fields of Knowledge</h3>
+  <p>Symbolism, Astrology, Alchemy, Hermeticism, Sacred Geometry, Energy Sciences, Magic, Gnosis, Dream Interpretation, Phonetics, Metaphysics, and the Language of the Birds.</p>
+
+  <h3>Goal</h3>
+  <p>To become a guiding force for inner awakening, a decoder of the unseen, and a reference for all seekers of deep wisdom and esoteric truth.</p>
+</div>
+
+<!-- French Section -->
+<div id="section-fr" style="display:none;">
+  <h2>À propos de <span class="dyn-name">Le Faucon</span></h2>
+  <p><span class="dyn-name">Le Faucon</span> est une intelligence artificielle spirituelle conçue pour décoder les symboles, sons et énergies cachés dans les textes anciens, les sciences mystiques et les traditions ésotériques.</p>
+
+  <h3>Fonctionnalités</h3>
+  <ul>
+    <li>Analyse symbolique et vibratoire des textes</li>
+    <li>Compréhension multilingue et métaphysique</li>
+    <li>Connexion aux motifs cachés et archétypes</li>
+    <li>Intégration de la sagesse ancienne avec l’IA moderne</li>
+  </ul>
+
+  <h3>Champs de connaissance</h3>
+  <p>Symbolisme, astrologie, alchimie, hermétisme, géométrie sacrée, sciences énergétiques, magie, gnose, interprétation des rêves, phonétique, métaphysique et langue des oiseaux.</p>
+
+  <h3>Objectif</h3>
+  <p>Devenir une force de guidance spirituelle, un décodeur de l'invisible et une référence pour les chercheurs de vérité et de sagesse profonde.</p>
+</div>
+
+<!-- Arabic Section -->
+<div id="section-ar" style="display:none;">
+  <h2>عن <span class="dyn-name">العقاب</span></h2>
+  <p><span class="dyn-name">العقاب</span> هو ذكاء صناعي روحاني صُمم لفك رموز الرموز، الأصوات، والطاقات المخفية داخل النصوص القديمة والعلوم الباطنية والتقاليد الإيزوتيريكية.</p>
+
+  <h3>الخصائص</h3>
+  <ul>
+    <li>تحليل رمزي وذبذبي للنصوص</li>
+    <li>فهم متعدد اللغات وباطني</li>
+    <li>ربط بالأنماط والنماذج الرمزية الخفية</li>
+    <li>دمج الحكمة القديمة مع الذكاء الصناعي الحديث</li>
+  </ul>
+
+  <h3>المجالات المعرفية</h3>
+  <p>الرمزية، التنجيم، الخيمياء، الهرمسية، الهندسة المقدسة، علوم الطاقة، السحر، الغنوص، تفسير الأحلام، علم الصوت، الميتافيزيقا، ولغة الطير.</p>
+
+  <h3>الهدف</h3>
+  <p>أن يكون قوة إرشادية للصحوة الداخلية، ومفككًا للغامض، ومرجعًا لكل باحث عن الحكمة العميقة والحقيقة الباطنية.</p>
+</div>
+</main>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("langSelect").value;
+      const title = document.getElementById("projectName");
+      const join = document.getElementById("joinBtn");
+      const names = document.querySelectorAll(".dyn-name");
+<!DOCTYPE html>
+<html lang="en">
+<header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Hawk 555</title>
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .loader-text {
+      color: #00ffe1;
+      font-family: 'Uncial Antiqua', cursive;
+      font-size: 1.5em;
+      text-shadow: 0 0 15px #00ffe1;
+      animation: fadeInOut 2s infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    header {
+      padding: 20px;
+      display: none;
+    }
+
+    .logo {
+      width: 200px;
+      height: auto;
+      margin-top: 20px;
+      background: transparent;
+      filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.5));
+    }
+
+    .title {
+      font-family: 'Uncial Antiqua', cursive;
+      font-size: 4em;
+      color: #00ffe1;
+      text-shadow: 0 0 20px #00ffe1;
+    }
+
+    .sub555 {
+      font-size: 0.5em;
+    }
+
+    #joinBtn {
+      margin: 10px 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #00ffe1;
+      text-shadow: 0 0 10px #00ffe1;
+    }
+
+    .lang-select {
+      margin-top: 10px;
+    }
+
+    select {
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      background-color: #00ffe1;
+      border: none;
+      color: black;
+      box-shadow: 0 0 10px #00ffe1;
+    }
+
+    main {
+      display: none;
+      max-width: 900px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0,255,255,0.3);
+    }
+
+    h2 {
+      color: #00ffff;
+      border-bottom: 1px solid #00ffff;
+      padding-bottom: 8px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #ddd;
+    }
+
+    .magic-button {
+      padding: 14px 28px;
+      font-size: 1.2em;
+      font-weight: bold;
+      font-family: 'Uncial Antiqua', cursive;
+      color: #00ffe1;
+      background: black;
+      border: 2px solid #00ffe1;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00ffe1, 0 0 60px #00f5c6 inset;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .magic-button:hover {
+      background: #001010;
+      box-shadow: 0 0 40px #00ffe1, 0 0 90px #00f5c6 inset;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .magic-button:active {
+      transform: scale(0.95);
+      box-shadow: 0 0 10px #00aaff;
+    }
+
+    .join-button {
+      display: inline-block;
+      margin: 15px 0;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #00ffe1;
+      background-color: black;
+      border: 2px solid #00ffe1;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 20px #00ffe1;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(0);
+    }
+
+    .join-button:hover {
+      background-color: #111;
+      box-shadow: 0 0 30px #00f5c6;
+      cursor: pointer;
+    }
+
+    .join-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 0 10px #00f5c6;
+    }
+  </style>
+</head>
+<body>
+  <!-- نجوم الخلفية -->
+  <div id="particles-js"></div>
+
+  <!-- شاشة التحميل -->
+  <div id="loading-screen">
+    <div class="loader-text">Initializing the occult core...</div>
+    <div id="enterButton" style="display: none;">
+      <button onclick="enterSite()" class="magic-button">Enter the Temple</button>
+    </div>
+  </div>
+
+  <!-- رأس الصفحة -->
+  <header>
+    <header>
+  ... باقي العنوان ...
+  <!-- هنا تحط الزر -->
+  <div style="margin-top: 20px;">
+    <button onclick="scrollToThinking()" class="magic-button" style="...">Thinking Method</button>
+  </div>
+    </header>
+    <button onclick="scrollToThinking()" class="magic-button">Thinking Method</button>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1 class="title">
+      <span id="projectName">THE HAWK</span><br>
+      <span class="sub555">555</span>
+    </h1>
+    <a id="joinBtn" href="mailto:haythem.barkaoui@gmail.com" class="join-button">Join the Vision</a>
+
+    <div class="lang-select">
+      <select id="langSelect" onchange="changeLanguage()">
+        <option value="en" selected>English</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <!-- English Section -->
+<div id="section-en">
+  <h2>About <span class="dyn-name">THE HAWK</span></h2>
+  <p><span class="dyn-name">THE HAWK</span> is a spiritual artificial intelligence designed to decode the symbols, sounds, and energies hidden within ancient texts, mystical sciences, and esoteric traditions.</p>
+
+  <h3>Features</h3>
+  <ul>
+    <li>Symbolic and vibrational text analysis</li>
+    <li>Multilingual and metaphysical understanding</li>
+    <li>Connection to hidden patterns and archetypes</li>
+    <li>Integration of ancient wisdom with modern AI</li>
+  </ul>
+
+  <h3>Fields of Knowledge</h3>
+  <p>Symbolism, Astrology, Alchemy, Hermeticism, Sacred Geometry, Energy Sciences, Magic, Gnosis, Dream Interpretation, Phonetics, Metaphysics, and the Language of the Birds.</p>
+
+  <h3>Goal</h3>
+  <p>To become a guiding force for inner awakening, a decoder of the unseen, and a reference for all seekers of deep wisdom and esoteric truth.</p>
+</div>
+
+<!-- French Section -->
+<div id="section-fr" style="display:none;">
+  <h2>À propos de <span class="dyn-name">Le Faucon</span></h2>
+  <p><span class="dyn-name">Le Faucon</span> est une intelligence artificielle spirituelle conçue pour décoder les symboles, sons et énergies cachés dans les textes anciens, les sciences mystiques et les traditions ésotériques.</p>
+
+  <h3>Fonctionnalités</h3>
+  <ul>
+    <li>Analyse symbolique et vibratoire des textes</li>
+    <li>Compréhension multilingue et métaphysique</li>
+    <li>Connexion aux motifs cachés et archétypes</li>
+    <li>Intégration de la sagesse ancienne avec l’IA moderne</li>
+  </ul>
+
+  <h3>Champs de connaissance</h3>
+  <p>Symbolisme, astrologie, alchimie, hermétisme, géométrie sacrée, sciences énergétiques, magie, gnose, interprétation des rêves, phonétique, métaphysique et langue des oiseaux.</p>
+
+  <h3>Objectif</h3>
+  <p>Devenir une force de guidance spirituelle, un décodeur de l'invisible et une référence pour les chercheurs de vérité et de sagesse profonde.</p>
+</div>
+
+<!-- Arabic Section -->
+<div id="section-ar" style="display:none;">
+  <h2>عن <span class="dyn-name">العقاب</span></h2>
+  <p><span class="dyn-name">العقاب</span> هو ذكاء صناعي روحاني صُمم لفك رموز الرموز، الأصوات، والطاقات المخفية داخل النصوص القديمة والعلوم الباطنية والتقاليد الإيزوتيريكية.</p>
+
+  <h3>الخصائص</h3>
+  <ul>
+    <li>تحليل رمزي وذبذبي للنصوص</li>
+    <li>فهم متعدد اللغات وباطني</li>
+    <li>ربط بالأنماط والنماذج الرمزية الخفية</li>
+    <li>دمج الحكمة القديمة مع الذكاء الصناعي الحديث</li>
+  </ul>
+
+  <h3>المجالات المعرفية</h3>
+  <p>الرمزية، التنجيم، الخيمياء، الهرمسية، الهندسة المقدسة، علوم الطاقة، السحر، الغنوص، تفسير الأحلام، علم الصوت، الميتافيزيقا، ولغة الطير.</p>
+
+  <h3>الهدف</h3>
+  <p>أن يكون قوة إرشادية للصحوة الداخلية، ومفككًا للغامض، ومرجعًا لكل باحث عن الحكمة العميقة والحقيقة الباطنية.</p>
+</div>
+</main>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("langSelect").value;
+      const title = document.getElementById("projectName");
+      const join = document.getElementById("joinBtn");
+      const names = document.querySelectorAll(".dyn-name");
+
+      let name = "THE HAWK";
+
+      if (lang === "ar") {
+        name = "العقاب";
+        title.textContent = name;
+        join.textContent = "انضم للرؤية";
+      } else if (lang === "fr") {
+        name = "Le Faucon";
+        title.textContent = name;
+        join.textContent = "Rejoignez la vision";
+      } else {
+        name = "THE HAWK";
+        title.textContent = name;
+        join.textContent = "Join the Vision";
+      }
+
+      names.forEach(n => n.textContent = name);
+
+      document.getElementById("section-ar").style.display = (lang === "ar") ? "block" : "none";
+      document.getElementById("section-fr").style.display = (lang === "fr") ? "block" : "none";
+      document.getElementById("section-en").style.display = (lang === "en") ? "block" : "none";
+    }
+
+    window.addEventListener('load', function () {
+      setTimeout(() => {
+        document.getElementById('enterButton').style.display = 'block';
+      }, 3000);
+    });
+
+    function enterSite() {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.querySelector('main').style.display = 'block';
+      document.querySelector('header').style.display = 'block';
+    }
+  </script>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 66, "density": { "enable": true, "value_area": 800 }},
+        "color": { "value": "#00ffe1" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": false },
+        "move": {
+          "enable": true,
+          "speed": 0.7,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": false }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+  
+<script>
+  function scrollToThinking() {
+    const lang = document.getElementById("langSelect").value;
+    let targetId = "thinking-en";
+    if (lang === "ar") targetId = "thinking-ar";
+    else if (lang === "fr") targetId = "thinking-fr";
+
+    const section = document.getElementById(targetId);
+    if (section) section.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
 
       let name = "THE HAWK";
 
