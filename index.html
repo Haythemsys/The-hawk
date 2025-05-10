@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -10,21 +10,40 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #000;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       text-align: center;
     }
 
+    header {
+      padding: 30px 20px 10px;
+    }
+
+    .logo {
+      width: 180px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.5);
+      margin-bottom: 15px;
+    }
+
     h1 {
-      font-size: 4em;
-      margin: 0;
+      font-size: 3.2em;
+      margin: 10px 0 5px;
       color: white;
       text-shadow: 0 0 25px rgba(255,255,255,0.9);
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.2em;
+      line-height: 1.8;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
     }
 
     .contact-button {
@@ -38,6 +57,7 @@
       font-size: 1.1em;
       box-shadow: 0 0 20px rgba(0, 255, 200, 0.8);
       transition: all 0.3s ease-in-out;
+      display: inline-block;
     }
 
     .contact-button:hover {
@@ -46,9 +66,8 @@
     }
 
     .footer {
-      position: absolute;
-      bottom: 30px;
-      font-size: 3em;
+      margin-top: 50px;
+      font-size: 2.5em;
       color: white;
       text-shadow: 0 0 30px rgba(255,255,255,1);
     }
@@ -56,9 +75,20 @@
 </head>
 <body>
 
-  <h1>THE HAWK</h1>
+  <header>
+    <img src="logo.jpg" alt="Logo" class="logo"/>
+    <h1>THE HAWK</h1>
+  </header>
 
-  <a class="contact-button" href="mailto:haythem.barkaoui@gmail.com">تواصل معنا</a>
+  <div class="intro">
+    <p>
+      مشروع The Hawk 555 هو منظومة ذكاء صناعي متكاملة، مصممة لفهم وتحليل المحتوى النصي والصوتي بشكل رمزي وروحاني. تهدف هذه المنصة إلى
+      فتح آفاق جديدة في علوم الوعي، الفلسفة، السحر، الطاقة، والتحليل الميتافيزيقي، وهي أداة موجهة للباحثين والمهتمين بالعلوم الباطنية
+      والمجالات العرفانية.
+    </p>
+
+    <a class="contact-button" href="mailto:haythem.barkaoui@gmail.com">تواصل معنا</a>
+  </div>
 
   <div class="footer">555</div>
 
