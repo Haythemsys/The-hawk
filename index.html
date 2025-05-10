@@ -8,13 +8,14 @@
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <style>
     #particles-js {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -23,13 +24,7 @@
       color: white;
       text-align: center;
     }
-<body>
 
-  <div id="particles-js"></div> <!-- هنا تتحط -->
-
-  <header>
-    ...
-  </header>
     header {
       padding: 20px;
     }
@@ -60,80 +55,10 @@
       50% { text-shadow: 0 0 30px #00f5c6, 0 0 60px #00f5c6; }
       100% { text-shadow: 0 0 20px #00ffe1, 0 0 40px #00ffe1; }
     }
-    .lang-select {
-      margin: 10px;
-    }
-
-    select {
-      padding: 10px;
-      font-weight: bold;
-      border-radius: 5px;
-      border: none;
-      background-color: #00f5c6;
-      color: black;
-      box-shadow: 0 0 15px #00f5c6;
-      transition: all 0.3s ease-in-out;
-    }
-
-    select:hover {
-      background-color: #00ffe1;
-      box-shadow: 0 0 25px #00ffe1;
-    }
-
-    .email-btn {
-      display: inline-block;
-      margin: 15px;
-      padding: 12px 24px;
-      background-color: #00f5c6;
-      color: black;
-      font-size: 1.1em;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 0 15px #00f5c6;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .email-btn:hover {
-      background-color: #00ffe1;
-      box-shadow: 0 0 25px #00ffe1;
-    }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 0 30px rgba(0,255,255,0.3);
-    }
-
-    section {
-      margin-bottom: 35px;
-    }
-
-    h2 {
-      color: #00ffff;
-      border-bottom: 1px solid #00ffff;
-      padding-bottom: 8px;
-    }
-
-    p {
-      font-size: 1.1em;
-      line-height: 1.8;
-      color: #ddd;
-    }
-
-    footer {
-      font-size: 2.5em;
-      color: white;
-      margin-top: 40px;
-      text-shadow: 0 0 20px white;
-    }
   </style>
 </head>
 <body>
-
+  <div id="particles-js"></div>
   <header>
     <img src="logo.png" alt="Logo" class="logo">
     <h1 class="title">
@@ -150,6 +75,7 @@
       </select>
     </div>
   </header>
+
   <main>
     <!-- العربية -->
     <div id="text-ar" style="display: none;">
@@ -166,7 +92,6 @@
         <p>السيميولوجيا – علم الحروف – الرمزية – علم الطاقات – الفلك – السحر القديم – الفلسفة – علوم الوعي – علوم الصوت – الخيمياء – التنجيم – اليوغا – الإيزوتيريك – لغة الطير</p>
       </section>
     </div>
-
     <!-- Français -->
     <div id="text-fr" style="display: none;">
       <section><h2>Présentation du projet</h2>
@@ -199,6 +124,7 @@
       </section>
     </div>
   </main>
+
   <script>
     function changeLanguage() {
       const lang = document.getElementById("langSelect").value;
@@ -232,47 +158,36 @@
       changeLanguage();
     };
   </script>
-<script>
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 66,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#00ffe1"
-    },
-    "shape": {
-      "type": "circle"
-    },
-    "opacity": {
-      "value": 0.3
-    },
-    "size": {
-      "value": 3
-    },
-    "line_linked": {
-      "enable": false
-    },
-    "move": {
-      "enable": true,
-      "speed": 0.7,
-      "direction": "none",
-      "out_mode": "out"
-    }
-  },
-  "interactivity": {
-    "events": {
-      "onhover": {
-        "enable": false
-      }
-    }
-  },
-  "retina_detect": true
-});
-</script>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 66,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": { "value": "#00ffe1" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": false },
+        "move": {
+          "enable": true,
+          "speed": 0.7,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": false }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
