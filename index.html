@@ -27,17 +27,30 @@
       background: transparent;
       filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.5));
     }
-.title {
+..title {
   font-family: 'Uncial Antiqua', cursive;
   font-size: 4.5em;
   color: #00ffe1;
-  text-shadow: 0 0 40px #00ffe1;
+  animation: pulseGlow 2.5s infinite ease-in-out;
 }
+
 .sub555 {
   font-size: 0.6em;
   color: #00ffe1;
-  text-shadow: 0 0 20px #00ffe1;
+  animation: pulseGlow 3s infinite ease-in-out;
 }
+}
+    @keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 20px #00ffe1, 0 0 40px #00ffe1;
+  }
+  50% {
+    text-shadow: 0 0 30px #00f5c6, 0 0 60px #00f5c6;
+  }
+  100% {
+    text-shadow: 0 0 20px #00ffe1, 0 0 40px #00ffe1;
+  }
+    }
     .subtitle {
       font-size: 1.2em;
       margin-top: -10px;
