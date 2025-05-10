@@ -152,7 +152,10 @@
     <span id="projectName">THE HAWK</span><br>
     <span class="sub555">555</span>
   </h1>
-  <div id="joinBtn">Join the Vision</div>
+  <a id="joinBtn" href="mailto:haythem.barkaoui@gmail.com"
+   style="margin: 10px 0; font-size: 1.2em; font-weight: bold; color: #00ffe1; text-shadow: 0 0 10px #00ffe1; text-decoration: none;">
+  Join the Vision
+  </a>
   <div class="lang-select">
     <select id="langSelect" onchange="changeLanguage()">
       <option value="en" selected>English</option>
@@ -204,6 +207,20 @@
     const lang = document.getElementById("langSelect").value;
     const title = document.getElementById("projectName");
     const join = document.getElementById("joinBtn");
+
+if (lang === "ar") {
+  title.textContent = "العقاب";
+  join.textContent = "انضم للرؤية";
+  name = "العقاب";
+} else if (lang === "fr") {
+  title.textContent = "Le Faucon";
+  join.textContent = "Rejoignez la vision";
+  name = "Le Faucon";
+} else {
+  title.textContent = "THE HAWK";
+  join.textContent = "Join the Vision";
+  name = "THE HAWK";
+  }
     const names = document.querySelectorAll(".dyn-name");
 
     let name = "THE HAWK";
