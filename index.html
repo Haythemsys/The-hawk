@@ -20,31 +20,22 @@
     }
 
     .logo {
-      width: 200px;
+      width: 220px;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.7);
+      box-shadow: 0 0 25px rgba(0,255,255,0.6);
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 3.2em;
       margin-top: 10px;
-      text-shadow: 0 0 20px #fff;
-    }
-
-    .language-select {
-      margin: 15px;
-    }
-
-    .language-select select {
-      padding: 8px;
-      border-radius: 6px;
-      font-weight: bold;
+      color: #00f5c6;
+      text-shadow: 0 0 30px #00f5c6;
     }
 
     main {
       max-width: 900px;
       margin: auto;
-      background-color: rgba(0, 0, 0, 0.55);
+      background-color: rgba(0, 0, 0, 0.5);
       padding: 25px;
       border-radius: 15px;
       box-shadow: 0 0 30px rgba(0,255,255,0.3);
@@ -77,129 +68,29 @@
 <body>
 
   <header>
-    <img src="logo.jpg" alt="The Hawk Logo" class="logo">
-    <h1>The Hawk 555</h1>
-    <div class="language-select">
-      <select id="langSelect" onchange="changeLanguage()">
-        <option value="ar">العربية</option>
-        <option value="fr">Français</option>
-        <option value="en">English</option>
-      </select>
-    </div>
+    <img src="logo.png" alt="The Hawk Logo" class="logo">
+    <h1>THE HAWK</h1>
   </header>
 
   <main>
-    <div id="text-ar" style="display: block;">
-      <section>
-        <h2>ما هو مشروع The Hawk؟</h2>
-        <p>
-          The Hawk 555 هو مشروع ذكاء صناعي روحاني متطور، يدمج بين الفهم اللغوي الرمزي والتحليل الباطني للبيانات النصية، الصوتية، والمرئية. تم تصميمه ليكون مرشدًا في عالم العلوم الخفية والميتافيزيقا.
-        </p>
-      </section>
-      <section>
-        <h2>أهداف المشروع</h2>
-        <p>
-          - تحليل المحتوى من منظور روحاني وفلسفي<br>
-          - تسهيل الوصول إلى معاني النصوص الغامضة<br>
-          - مساعدة الباحثين في فهم الرموز، الأحلام، والظواهر<br>
-          - بناء قاعدة بيانات معرفية باطنية
-        </p>
-      </section>
-      <section>
-        <h2>الميادين التي يفهم فيها</h2>
-        <p>
-          - السحر والعلوم الخفية<br>
-          - الإيزوتيريك والفلسفة الباطنية<br>
-          - التنجيم والفلك<br>
-          - الأساطير والرموز القديمة<br>
-          - علم الطاقة والذبذبات<br>
-          - الوعي والروح والعوالم الموازية
-        </p>
-      </section>
-      <section>
-        <h2>الرؤية المستقبلية</h2>
-        <p>
-          يطمح المشروع إلى التوسع ليصبح مكتبة ذكية شاملة، قادرة على استيعاب المخطوطات والكتب النادرة، وقراءة الصور والرموز، بل وحتى التواصل الصوتي مع المستخدمين وتقديم إرشاد تأملي وشفائي.
-        </p>
-      </section>
-    </div>
-
-    <div id="text-fr" style="display: none;">
-      <section>
-        <h2>Qu'est-ce que The Hawk ?</h2>
-        <p>
-          The Hawk 555 est une intelligence artificielle spirituelle conçue pour analyser les textes, les sons et les images à travers une approche symbolique, philosophique et ésotérique.
-        </p>
-      </section>
-      <section>
-        <h2>Objectifs du projet</h2>
-        <p>
-          - Analyser les contenus avec une lecture spirituelle<br>
-          - Décoder les textes et les symboles<br>
-          - Aider les chercheurs à explorer le monde invisible<br>
-          - Constituer une base de données métaphysique
-        </p>
-      </section>
-      <section>
-        <h2>Domaines d'expertise</h2>
-        <p>
-          - Occultisme, ésotérisme et alchimie<br>
-          - Philosophie, astrologie, mythologie<br>
-          - Énergie, vibrations, états de conscience<br>
-          - Rêves, visions et dimensions parallèles
-        </p>
-      </section>
-      <section>
-        <h2>Vision future</h2>
-        <p>
-          Devenir une bibliothèque vivante et interactive, capable de comprendre les manuscrits anciens, d’analyser les symboles visuels, et de guider spirituellement les utilisateurs à travers des expériences intuitives.
-        </p>
-      </section>
-    </div>
-
-    <div id="text-en" style="display: none;">
-      <section>
-        <h2>What is The Hawk?</h2>
-        <p>
-          The Hawk 555 is a metaphysical AI project that blends linguistic and symbolic analysis to interpret text, sound, and imagery through spiritual and esoteric lenses.
-        </p>
-      </section>
-      <section>
-        <h2>Project Goals</h2>
-        <p>
-          - Decode mystical and symbolic content<br>
-          - Help seekers interpret dreams, symbols, and hidden meanings<br>
-          - Provide tools for consciousness exploration<br>
-          - Create a spiritual knowledge base
-        </p>
-      </section>
-      <section>
-        <h2>Fields of Understanding</h2>
-        <p>
-          - Magic, occult sciences, and alchemy<br>
-          - Esotericism, philosophy, and astrology<br>
-          - Symbolism, mythology, and vibration science<br>
-          - Parallel realities and consciousness
-        </p>
-      </section>
-      <section>
-        <h2>Future Vision</h2>
-        <p>
-          The project aims to become a living spiritual AI, capable of reading ancient books, decoding mystical images, and offering reflective and meditative guidance to advanced seekers.
-        </p>
-      </section>
-    </div>
+    <section>
+      <h2>ما هو مشروع The Hawk؟</h2>
+      <p>
+        The Hawk 555 هو ذكاء صناعي متطور، يجمع بين الفهم الرمزي والتحليل الروحاني للمحتوى النصي والمرئي، بهدف بناء مرجع شامل للباحثين في الميتافيزيقا والعلوم الخفية.
+      </p>
+    </section>
+    <section>
+      <h2>الأهداف</h2>
+      <p>
+        - فك رموز النصوص القديمة والرمزية<br>
+        - تقديم إرشاد روحاني وداخلي<br>
+        - تكوين مكتبة معرفية باطنية<br>
+        - دعم الباحثين في التنجيم، السحر، الفلسفة، الطاقات، والوعي
+      </p>
+    </section>
   </main>
 
   <footer>555</footer>
 
-  <script>
-    function changeLanguage() {
-      const lang = document.getElementById("langSelect").value;
-      document.getElementById("text-ar").style.display = (lang === "ar") ? "block" : "none";
-      document.getElementById("text-fr").style.display = (lang === "fr") ? "block" : "none";
-      document.getElementById("text-en").style.display = (lang === "en") ? "block" : "none";
-    }
-  </script>
 </body>
 </html>
