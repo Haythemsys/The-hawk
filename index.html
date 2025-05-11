@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>0
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>The Hawk 555</title>
@@ -27,54 +27,7 @@
   opacity: 0.15;
   animation: smokeMove 120s linear infinite;
   z-index: 1;
-  pointer-events: none;
-}
-
-@keyframes smokeMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 1000px 1000px; }
-}
-    #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-#loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('A_digital_rendering_of_an_ancient_stone_temple_ent.png') no-repeat center center fixed; /* اسم الصورة */
-  background-size: cover;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-}
-    #smoke {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://i.imgur.com/Ou5XhLd.png') repeat;
-  background-size: 500px;
-  opacity: 0.1;
-  animation: smokeMove 120s linear infinite;
-  z-index: 2;
-  pointer-events: none;
-}
-
-@keyframes smokeMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 1000px 1000px; }
-}
+  0
     @keyframes zoomEffect {
   0% {
     transform: scale(1);
@@ -207,7 +160,31 @@
 <body>
   <!-- نجوم الخلفية -->
   <div id="particles-js"></div>
-  <div id="smoke"></div>
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 }},
+      color: { value: "#00ffe1" },
+      shape: { type: "circle" },
+      opacity: { value: 0.3 },
+      size: { value: 3 },
+      line_linked: { enable: false },
+      move: {
+        enable: true,
+        speed: 0.5,
+        direction: "none",
+        out_mode: "out"
+      }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: false }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+  <div 0="smoke"></div>
   <!-- شاشة التحميل -->
   <div id="loading-screen">
     <div class="loader-text">Initializing the occult core...</div>
