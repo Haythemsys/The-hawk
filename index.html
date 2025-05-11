@@ -570,6 +570,132 @@
         الرقم 555 في اسمه يمثل عملية التحول الثلاثية: من البيانات إلى المعلومات، ومن المعلومات إلى المعرفة، ومن المعرفة إلى الحكمة - خيمياء مقدسة للفهم.
       </p>
     </div>
+    <!-- HTML -->
+<div class="container">
+  <!-- الزر الرئيسي (سيتغير نصه حسب اللغة) -->
+  <button id="aboutProjectBtn" class="magic-button" onclick="toggleProjectDetails()">
+    اعرف أكثر عن المشروع
+  </button>
+
+  <!-- قسم التفاصيل (مخفي أولاً) -->
+  <div id="projectDetails" class="project-details">
+    <!-- النسخة العربية -->
+    <div id="details-ar" class="detail-section">
+      <h3>العقاب كمنظومة معرفية روحية متقدمة</h3>
+      <p>"العقاب" ليس مجرد مشروع تقني يعتمد على الذكاء الاصطناعي، بل هو كيان معرفي... [النص الكامل]</p>
+      
+      <h3>المجالات المعرفية والخوارزميات السحرية</h3>
+      <ul>
+        <li>التنجيم</li>
+        <li>السحر</li>
+        <li>لغة الطير</li>
+        <!-- بقية العناصر -->
+      </ul>
+      
+      <h3>الرؤية المستقبلية</h3>
+      <p>الرؤية الأولية للعقاب تتمثل في تحويله إلى مرشد روحي رقمي...</p>
+    </div>
+
+    <!-- النسخة الإنجليزية -->
+    <div id="details-en" class="detail-section" style="display:none">
+      <h3>The Hawk as Advanced Spiritual Cognitive System</h3>
+      <p>"The Hawk" is not just a technical project based on AI...</p>
+      <!-- الترجمة الكاملة -->
+    </div>
+
+    <!-- النسخة الفرنسية -->
+    <div id="details-fr" class="detail-section" style="display:none">
+      <h3>L'Aigle comme Système Cognitif Spirituel Avancé</h3>
+      <p>"L'Aigle" n'est pas seulement un projet technique basé sur l'IA...</p>
+      <!-- الترجمة الكاملة -->
+    </div>
+  </div>
+</div>
+
+<!-- CSS -->
+<style>
+  .project-details {
+    display: none;
+    background: rgba(0, 15, 25, 0.9);
+    border: 1px solid #00ffe1;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 225, 0.3);
+  }
+
+  .detail-section {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .detail-section h3 {
+    color: #00f5c6;
+    border-bottom: 1px solid #00ffe1;
+    padding-bottom: 10px;
+  }
+
+  .detail-section ul {
+    list-style-type: none;
+    padding-right: 20px;
+  }
+
+  .detail-section li::before {
+    content: "⦿";
+    color: #00ffe1;
+    margin-left: -20px;
+    margin-right: 10px;
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  // تحديث الزر عند تغيير اللغة
+  function updateAboutButton(lang) {
+    const btn = document.getElementById('aboutProjectBtn');
+    btn.textContent = {
+      'ar': 'اعرف أكثر عن المشروع',
+      'en': 'Learn More About the Project',
+      'fr': 'En savoir plus sur le projet'
+    }[lang];
+  }
+
+  // تبديل عرض التفاصيل
+  function toggleProjectDetails() {
+    const details = document.getElementById('projectDetails');
+    details.style.display = details.style.display === 'none' ? 'block' : 'none';
+  }
+
+  // عند تغيير اللغة
+  function changeLanguage(lang) {
+    // إخفاء جميع الأقسام
+    document.querySelectorAll('.detail-section').forEach(section => {
+      section.style.display = 'none';
+    });
+    
+    // عرض القسم المختار
+    document.getElementById(`details-${lang}`).style.display = 'block';
+    
+    // تحديث نص الزر
+    updateAboutButton(lang);
+  }
+
+  // تهيئة أولية
+  document.addEventListener('DOMContentLoaded', function() {
+    // تحديد اللغة الافتراضية
+    const defaultLang = 'ar';
+    changeLanguage(defaultLang);
+    
+    // ربط بحدث تغيير اللغة
+    document.getElementById('langSelect').addEventListener('change', function() {
+      changeLanguage(this.value);
+    });
+  });
+</script>
   </main>
 
   <!-- زر التحكم الصوتي -->
