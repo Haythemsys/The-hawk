@@ -304,7 +304,7 @@
     </div>
     
     <div>
-      <button onclick="scrollToAlUqab()" class="magic-button">Discover the Hidden Knowledge</button>
+      <button onclick="scrollToAlUqab()" class="magic-button" id="discoverBtn">Discover the Hidden Knowledge</button>
     </div>
     
     <a id="joinBtn" href="mailto:haythem.barkaoui@gmail.com" class="join-button">Join the Spiritual Journey</a>
@@ -344,7 +344,7 @@
       <!-- Learn More Button -->
       <button id="aboutProjectBtn" class="magic-button" onclick="toggleProjectDetails()">Learn More About the Project</button>
       
-      <!-- Project Details (English) -->
+      <!-- Project Details -->
       <div id="projectDetails" class="project-details">
         <div id="details-en" class="detail-section">
           <h3>The Hawk as Advanced Spiritual Cognitive System</h3>
@@ -401,9 +401,6 @@
 
       <h3>But Divin</h3>
       <p>Servir de phare pour l'éveil intérieur, un décodeur des mystères cosmiques, et une référence sacrée pour tous ceux qui cherchent la sagesse profonde et la vérité ésotérique en cette ère de transformation spirituelle.</p>
-      
-      <!-- Learn More Button -->
-      <button id="aboutProjectBtnFr" class="magic-button" onclick="toggleProjectDetails()">En savoir plus sur le projet</button>
     </div>
 
     <!-- Arabic Section -->
@@ -426,9 +423,6 @@
 
       <h3>الغاية الإلهية</h3>
       <p>أن يكون منارة للصحوة الداخلية، مفككاً للأسرار الكونية، ومرجعاً مقدساً لكل باحث عن الحكمة العميقة والحقيقة الباطنية في هذا العصر من التحول الروحاني.</p>
-      
-      <!-- Learn More Button -->
-      <button id="aboutProjectBtnAr" class="magic-button" onclick="toggleProjectDetails()">اعرف أكثر عن المشروع</button>
     </div>
   </main>
 
@@ -482,31 +476,40 @@
     function changeLanguage() {
       playSound('clickSound');
       const lang = document.getElementById('langSelect').value;
-      const title = document.getElementById('projectName');
-      const join = document.getElementById('joinBtn');
-      const names = document.querySelectorAll('.dyn-name');
-      
-      let name = "THE HAWK";
-      let joinText = "Join the Spiritual Journey";
-      let aboutText = "Learn More About the Project";
-      
-      if (lang === "ar") {
-        name = "العقاب";
-        joinText = "انضم إلى الرحلة الروحانية";
-        aboutText = "اعرف أكثر عن المشروع";
-      } else if (lang === "fr") {
-        name = "Le Faucon";
-        joinText = "Rejoignez le Voyage Spirituel";
-        aboutText = "En savoir plus sur le projet";
-      }
-      
-      title.textContent = name;
-      join.textContent = joinText;
-      names.forEach(n => n.textContent = name);
-      
-      // Update about button text
-      document.getElementById('aboutProjectBtn').textContent = aboutText;
-      
+      const elementsToUpdate = {
+        projectName: {
+          en: "THE HAWK",
+          fr: "Le Faucon",
+          ar: "العقاب"
+        },
+        joinBtn: {
+          en: "Join the Spiritual Journey",
+          fr: "Rejoignez le Voyage Spirituel",
+          ar: "انضم إلى الرحلة الروحانية"
+        },
+        discoverBtn: {
+          en: "Discover the Hidden Knowledge",
+          fr: "Découvrez la Connaissance Cachée",
+          ar: "اكتشف المعرفة المخفية"
+        },
+        aboutProjectBtn: {
+          en: "Learn More About the Project",
+          fr: "En savoir plus sur le projet",
+          ar: "اعرف أكثر عن المشروع"
+        }
+      };
+
+      // Update dynamic elements
+      document.getElementById('projectName').textContent = elementsToUpdate.projectName[lang];
+      document.getElementById('joinBtn').textContent = elementsToUpdate.joinBtn[lang];
+      document.getElementById('discoverBtn').textContent = elementsToUpdate.discoverBtn[lang];
+      document.getElementById('aboutProjectBtn').textContent = elementsToUpdate.aboutProjectBtn[lang];
+
+      // Update names in texts
+      document.querySelectorAll('.dyn-name').forEach(n => {
+        n.textContent = elementsToUpdate.projectName[lang];
+      });
+
       // Switch language sections
       document.querySelectorAll('[id^="section-"]').forEach(el => {
         el.style.display = 'none';
@@ -644,4 +647,4 @@
     });
   </script>
 </body>
-        </html>
+</html>
