@@ -333,6 +333,17 @@
 
   <script>
     function changeLanguage() {
+  const lang = document.getElementById("langSelect").value;
+
+  document.getElementById("section-en").style.display = (lang === "en") ? "block" : "none";
+  document.getElementById("section-fr").style.display = (lang === "fr") ? "block" : "none";
+  document.getElementById("section-ar").style.display = (lang === "ar") ? "block" : "none";
+
+  document.getElementById("thinking-en").style.display = (lang === "en") ? "block" : "none";
+  document.getElementById("thinking-fr").style.display = (lang === "fr") ? "block" : "none";
+  document.getElementById("thinking-ar").style.display = (lang === "ar") ? "block" : "none";
+    }
+    function changeLanguage() {
       const lang = document.getElementById("langSelect").value;
       const title = document.getElementById("projectName");
       const join = document.getElementById("joinBtn");
