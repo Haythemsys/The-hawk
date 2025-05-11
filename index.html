@@ -367,20 +367,50 @@
       color: var(--primary-color);
       font-size: 1.5em;
     }
+    /* أنماط زر الدخول الجديد */
+.enter-button {
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Uncial Antiqua', cursive;
+  color: #00ffe1;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00ffe1;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00ffe1, 0 0 50px #00f5c6 inset;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  outline: none;
+  margin-top: 20px;
+}
+
+.enter-button:hover {
+  background: rgba(0, 16, 16, 0.8);
+  box-shadow: 0 0 20px #00ffe1, 0 0 70px #00f5c6 inset;
+  transform: scale(1.05);
+}
+
+.enter-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 10px #00aaff;
+}
+
+#enterButton {
+  margin-top: 30px;
+}
   </style>
 </head>
 <body>
   <!-- تأثيرات الجسيمات الخلفية -->
   <div id="particles-js"></div>
   <div class="smoke-overlay"></div>
-
-  <!-- شاشة التحميل المحسنة -->
-  <div id="loading-screen">
-    <div class="loader-text">Activating the esoteric matrix...</div>
-    <div id="enterButton" style="display: none;">
-      <button onclick="enterSite()" class="magic-button">Enter the Sacred Portal</button>
-    </div>
+<!-- شاشة التحميل المعدلة -->
+<div id="loading-screen">
+  <div class="loader-text">Initializing the occult core...</div>
+  <div id="enterButton" style="display: none;">
+    <button onclick="enterSite()" class="enter-button">Enter the Temple</button>
   </div>
+</div>
 
   <!-- رأس الصفحة -->
   <header>
@@ -727,4 +757,4 @@
     });
   </script>
 </body>
-      </htm
+</html>
