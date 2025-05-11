@@ -40,7 +40,17 @@
   justify-content: center;
   flex-direction: column;
 }
-
+.smoke-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('smoke.gif') repeat;
+  background-size: cover;
+  opacity: 0.15;
+  z-index: -2;
+      }
     .loader-text {
       color: #00ffe1;
       font-family: 'Uncial Antiqua', cursive;
@@ -178,7 +188,7 @@
 <body>
   <!-- نجوم الخلفية -->
   <div id="particles-js"></div>
-
+<div class="smoke-overlay"></div>
   <!-- شاشة التحميل -->
   <div id="loading-screen">
     <div class="loader-text">Initializing the occult core...</div>
