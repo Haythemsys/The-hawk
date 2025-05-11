@@ -304,7 +304,9 @@
     </div>
     
     <div>
-      <button onclick="scrollToAlUqab()" class="magic-button" id="discoverBtn">Discover the Hidden Knowledge</button>
+      <button onclick="scrollToSection('thinking')" class="magic-button" id="discoverBtn">
+        Discover the Hidden Knowledge
+      </button>
     </div>
     
     <a id="joinBtn" href="mailto:haythem.barkaoui@gmail.com" class="join-button">Join the Spiritual Journey</a>
@@ -342,7 +344,9 @@
       <p>To serve as a beacon of inner awakening, a decoder of cosmic mysteries, and a sacred reference for all who seek profound wisdom and esoteric truth in this age of spiritual transformation.</p>
       
       <!-- Learn More Button -->
-      <button id="aboutProjectBtn" class="magic-button" onclick="toggleProjectDetails()">Learn More About the Project</button>
+      <button id="aboutProjectBtn" class="magic-button" onclick="toggleProjectDetails()">
+        Learn More About the Project
+      </button>
       
       <!-- Project Details -->
       <div id="projectDetails" class="project-details">
@@ -521,6 +525,18 @@
       activateScrollEffects();
     }
 
+    // Scroll to section
+    function scrollToSection(section) {
+      playSound('clickSound');
+      const lang = document.getElementById('langSelect').value;
+      const targetId = `section-${lang}`;
+      const sectionElement = document.getElementById(targetId);
+      
+      if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
     // Toggle project details
     function toggleProjectDetails() {
       playSound('clickSound');
@@ -541,18 +557,6 @@
       // Scroll to details if showing
       if (details.style.display === 'block') {
         details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-    }
-
-    // Scroll to section
-    function scrollToAlUqab() {
-      playSound('clickSound');
-      const lang = document.getElementById('langSelect').value;
-      const targetId = `section-${lang}`;
-      const section = document.getElementById(targetId);
-      
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
       }
     }
 
